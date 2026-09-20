@@ -11,7 +11,7 @@ export default function FinalCTA() {
           your team?
         </h2>
         <p className="mt-4 text-text-secondary">
-          Open to freelance engagements and full-time opportunities.
+          Open to freelance engagements and full - time opportunities.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link

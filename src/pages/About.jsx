@@ -21,7 +21,7 @@ const personalInfo = [
     icon: GraduationCap,
   },
   { label: 'Languages', value: 'Arabic, English', icon: Globe },
-  { label: 'Availability', value: 'Freelance & Full-time', icon: MapPin },
+  { label: 'Availability', value: 'Freelance & full - time', icon: MapPin },
 ]
 
 const stats = [
@@ -232,12 +232,13 @@ export default function About() {
                         : 'lg:col-start-2 lg:pl-12'
                     }`}
                   >
-                    <div className="rounded-card border border-border bg-surface-1 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-border-active hover:shadow-card-hover">
-                      <p
-                        className={`inline-flex items-center gap-1.5 font-mono text-xs text-text-tertiary ${
-                          isLeft ? 'lg:flex-row-reverse' : ''
-                        }`}
-                      >
+                  <div
+                    className={`pl-14 lg:pl-0 ${
+                      isLeft ? 'lg:col-start-1 lg:pr-12' : 'lg:col-start-2 lg:pl-12'
+                    }`}
+                  >
+                    <div className="rounded-card border border-border bg-surface-1 p-6 text-left transition-all duration-300 hover:-translate-y-0.5 hover:border-border-active hover:shadow-card-hover">
+                      <p className="inline-flex items-center gap-1.5 font-mono text-xs text-text-tertiary">
                         <Clock size={12} className="text-accent" />
                         {item.date}
                       </p>
@@ -247,6 +248,7 @@ export default function About() {
                       <p className="text-sm text-text-secondary">{item.org}</p>
                       <p className="mt-2 text-sm text-text-secondary">{item.description}</p>
                     </div>
+                  </div>
                   </div>
                 </motion.div>
               )

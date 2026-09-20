@@ -9,7 +9,7 @@ const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
 
 const infoRows = [
   { icon: MapPin, label: 'Location', value: 'Egypt' /* TODO: confirm exact city */ },
-  { icon: Clock, label: 'Availability', value: 'Open to Freelance & Full-time' },
+  { icon: Clock, label: 'Availability', value: 'Open to Freelance & full - time' },
   {
     icon: Mail,
     label: 'Email',
@@ -79,7 +79,7 @@ export default function Contact() {
           Let&apos;s Build Something Together
         </h1>
         <p className="mt-4 max-w-2xl text-base text-text-secondary">
-          Open to full-time opportunities and freelance/contract projects.
+          Open to full - time opportunities and freelance/contract projects.
         </p>
       </motion.div>
 

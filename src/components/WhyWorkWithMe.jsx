@@ -9,7 +9,7 @@ const points = [
   {
     icon: Code2,
     title: 'Clean, Readable Code',
-    body: "Every project follows organized, maintainable coding practices — not just 'it works' code.",
+    body: "Every project follows organized, maintainable coding practices - not just 'it works' code.",
   },
   {
     icon: Wrench,

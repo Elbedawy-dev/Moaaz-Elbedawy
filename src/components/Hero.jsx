@@ -22,7 +22,7 @@ export default function Hero() {
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
           </span>
           <span className="font-mono text-xs text-text-secondary">
-            Open to Freelance & Full-Time Opportunities
+            Open to Freelance & full - time Opportunities
           </span>
         </div>
 
