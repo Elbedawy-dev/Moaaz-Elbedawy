@@ -89,7 +89,7 @@ export default function Hero() {
             <span className="h-2.5 w-2.5 rounded-full bg-text-tertiary/30" />
           </div>
           <span className="font-mono text-[11px] text-text-tertiary gap-1">
-            moaaz.elbedawy//mern-stack dev
+            moaaz.elbedawy//mearn-stack
           </span>
           <span className="rounded-full bg-accent-subtle px-2 py-0.5 font-mono text-[10px]
            text-accent">
