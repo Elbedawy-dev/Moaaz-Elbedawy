@@ -74,9 +74,18 @@ export default function Projects() {
                 bg-surface-1 transition-all duration-300 hover:-translate-y-0.5 
                 hover:border-border-active hover:shadow-card-hover"
               >
-                <div className="flex aspect-16/10 items-center justify-center bg-surface-2">
-                  {/* TODO: replace with a real project screenshot */}
-                  <ImageIcon size={36} className="text-text-tertiary" />
+                <div className="aspect-16/10 overflow-hidden bg-surface-2">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center">
+                      <ImageIcon size={36} className="text-text-tertiary" />
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex flex-1 flex-col p-5">
@@ -144,7 +153,8 @@ export default function Projects() {
           })}
         </motion.div>
       ) : (
-        <div className="mt-8 rounded-card border border-border bg-surface-1 px-6 py-12 text-center">
+        <div className="mt-8 rounded-card border border-border bg-surface-1 
+        px-6 py-12 text-center">
           <p className="text-text-secondary">
             No projects in this category yet.
           </p>

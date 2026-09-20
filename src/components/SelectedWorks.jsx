@@ -1,28 +1,34 @@
 import { ArrowUpRight, ImageIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { GithubIcon } from './SocialIcons'
+import noteImg from '../image/noteImage.jpg'
+import posImage from '../image/posImage.jpg'
+import adanImage from '../image/adanImage.jpg'
 
 const projects = [
   {
     title: 'Adan',
     subtitle: 'Graduation Project (MERN)',
-    // TODO: add a richer one-line description for Adan
     description: 'Graduation project on the MERN stack. Entire front end owned by Moaaz.',
-    // TODO: add preview image, live demo URL, and GitHub repo for Adan
+    live: 'https://adan-animals.vercel.app', 
+    repo: 'https://github.com/Elbedawy-dev/Adan-Animals.git',
+    image: adanImage
   },
   {
     title: 'POS System',
     subtitle: 'Point of Sale application (MERN stack)',
-    // TODO: add a richer one-line description for the POS System
     description: 'Point of Sale application (MERN stack).',
-    // TODO: add preview image, live demo URL, and GitHub repo for POS System
+    live: 'https://pos-system-commercial.vercel.app', 
+    repo: 'https://github.com/Elbedawy-dev/POS_System.git',
+    image: posImage
   },
   {
     title: 'Notes App',
     subtitle: 'Notes/Notepad application (MERN stack)',
-    // TODO: add a richer one-line description for the Notes App
     description: 'Notes/Notepad application (MERN stack).',
-    // TODO: add preview image, live demo URL, and GitHub repo for Notes App
+    live: 'https://notpad-flow.vercel.app',
+    repo: 'https://github.com/Elbedawy-dev/NotPad.git',
+    image: noteImg
   },
 ]
 
@@ -42,9 +48,18 @@ export default function SelectedWorks() {
             key={project.title}
             className="overflow-hidden rounded-card border border-border bg-surface-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-border-active hover:shadow-card-hover"
           >
-            <div className="flex aspect-16/10 items-center justify-center bg-surface-2">
-              {/* TODO: replace with a real project screenshot */}
-              <ImageIcon size={36} className="text-text-tertiary" />
+            <div className="aspect-16/10 overflow-hidden bg-surface-2">
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center">
+                  <ImageIcon size={36} className="text-text-tertiary" />
+                </div>
+              )}
             </div>
             <div className="p-5">
               <p className="font-mono text-[11px] text-accent">{project.subtitle}</p>
@@ -65,7 +80,9 @@ export default function SelectedWorks() {
               </div>
               <div className="mt-5 flex items-center gap-4 text-sm">
                 <a
-                  href="#"
+                  href={project.live}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-1 text-accent transition-colors 
                   hover:text-accent-hover"
                 >
@@ -73,7 +90,9 @@ export default function SelectedWorks() {
                   <ArrowUpRight size={14} />
                 </a>
                 <a
-                  href="#"
+                  href={project.repo}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-1 text-text-secondary transition-colors 
                   hover:text-text-primary"
                 >

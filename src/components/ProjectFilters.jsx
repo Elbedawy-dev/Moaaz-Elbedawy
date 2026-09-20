@@ -21,7 +21,8 @@ export default function ProjectFilters({ value, onChange }) {
             // role="tab"
             aria-selected={active}
             onClick={() => onChange(filter.id)}
-            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer 
+            className={`rounded-full px-4 py-1.5 text-sm font-medium 
+              transition-colors cursor-pointer 
               
             ${ active
                 ? 'bg-accent text-text-primary shadow-glow'
