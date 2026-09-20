@@ -2,10 +2,10 @@ export const projects = [
   {
     title: 'Adan',
     category: 'fullstack',
-    description: 'Graduation project — a full MERN-stack application. Moaaz owned the entire Front End.',
+    description: 'Graduation project - a full MERN-stack application. Moaaz owned the entire Front End.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-    live: '#', // TODO: add live link
-    repo: '#', // TODO: add repo link
+    live: 'https://adan-animals.vercel.app', // TODO: add live link
+    repo: 'https://github.com/Elbedawy-dev/Adan-Animals.git', // TODO: add repo link
     featured: true,
     // TODO: add preview screenshot
   },

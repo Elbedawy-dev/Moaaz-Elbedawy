@@ -90,7 +90,7 @@ export default function Skills() {
           Skills &amp; Tools
         </h1>
         <p className="mt-4 max-w-2xl text-base text-text-secondary">
-          A MERN-stack foundation built through hands-on projects, backed by
+          A MERN-stack foundation built through hands - on projects, backed by
           structured training in HTML, CSS, JavaScript, and modern tooling.
         </p>
       </motion.div>

@@ -12,7 +12,7 @@ export default function Footer() {
           <Logo />
           <p className="max-w-sm text-sm text-text-secondary">
             Computer Science Student & Full-Stack MERN Developer, building real-world
-            web applications through hands-on projects.
+            web applications through hands - on projects.
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="flex items-start gap-3">
           {/* TODO: replace GitHub href with Moaaz's real profile URL */}
           <a
-            href="#"
+            href="https://github.com/Elbedawy-dev"
             aria-label="GitHub"
             className="flex h-10 w-10 items-center justify-center rounded-control border border-border text-text-secondary transition-colors hover:border-border-active hover:text-accent"
           >
@@ -48,8 +48,8 @@ export default function Footer() {
           </a>
           {/* TODO: replace email href with Moaaz's real address */}
           <a
-            href="#"
-            aria-label="Email"
+            href="https://moaazelbedawy@email.com"
+            aria-label="https://mail.google.com"
             className="flex h-10 w-10 items-center justify-center rounded-control border border-border text-text-secondary transition-colors hover:border-border-active hover:text-accent"
           >
             <Mail size={18} />

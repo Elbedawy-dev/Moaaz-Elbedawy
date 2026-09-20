@@ -13,7 +13,7 @@ const points = [
   },
   {
     icon: Wrench,
-    title: 'Hands-On Problem Solver',
+    title: 'Hands - On Problem Solver',
     body: 'Learns and builds through real projects rather than passive tutorials.',
   },
   {

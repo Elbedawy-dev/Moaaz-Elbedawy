@@ -26,16 +26,16 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="font-heading text-4xl font-extrabold leading-[1.1] tracking-heading-tight 
-        text-text-primary sm:text-3 xl">
-          <span className="text-accent">Building</span> Practical,{' '}
-          <span className="text-accent">Full-Stack</span> Web Applications.
+        <h1 className="font-heading text-3xl font-extrabold leading-[1.1] tracking-heading-tight 
+        text-text-primary sm:text-5xl">I'm 
+          <span className="text-accent"> Mearn</span> Stack {' '}
+          <span className="text-accent">Web</span> Develober.
         </h1>
-
+    {/* I'm Mearn Stack Web Develober */}
         <p className="mt-5 max-w-xl text-base text-text-secondary">
           Hi, I&apos;m <strong className="font-semibold text-text-primary">Moaaz Elbedawy</strong>{' '}
-          — a Computer Science student and Full-Stack MERN Developer, building real-world
-          web applications through hands-on projects using React, Node.js, Express, and
+          - a Computer Science student and Full-Stack MERN Developer, building real - world
+          web applications through hands - on projects using React, Node.js, Express, and
           MongoDB.
         </p>
 
@@ -70,7 +70,7 @@ export default function Hero() {
           <span className="text-border">·</span>
           <span className="inline-flex items-center gap-1.5">
             <UserRound size={14} className="text-accent" />
-            Hands-On Learner
+            Hands - On Learner
           </span>
         </div>
       </motion.div>
@@ -81,22 +81,23 @@ export default function Hero() {
         transition={{ duration: 0.55, delay: 0.08 }}
         className="overflow-hidden rounded-card border border-border bg-surface-1"
       >
-        <div className="flex items-center justify-between border-b border-border-subdued bg-surface-2 
-        px-4 py-2.5">
+        <div className="flex items-center justify-between
+         bg-surface-2 px-2 sm:px-4 py-2.5">
           <div className="flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full bg-[#C1571F]/80" />
             <span className="h-2.5 w-2.5 rounded-full bg-text-tertiary/50" />
             <span className="h-2.5 w-2.5 rounded-full bg-text-tertiary/30" />
           </div>
-          <span className="font-mono text-[11px] text-text-tertiary">
-            moaaz.elbedawy // full-stack dev
+          <span className="font-mono text-[11px] text-text-tertiary gap-1">
+            moaaz.elbedawy//mern-stack dev
           </span>
-          <span className="rounded-full bg-accent-subtle px-2 py-0.5 font-mono text-[10px] text-accent">
+          <span className="rounded-full bg-accent-subtle px-2 py-0.5 font-mono text-[10px]
+           text-accent">
             Open to Work
           </span>
         </div>
 
-        <div className="relative flex aspect-4/5 items-center justify-center bg-surface-2 sm:aspect-5/6">      
+        <div className="relative flex aspect-3/4 items-center justify-center bg-surface-2 sm:aspect-3/4">      
           <div className="flex h-full w-full items-center justify-center bg-linear-to-b 
           from-surface-hover to-surface-2">
             <img src={me} alt="Moaaz Elbedawy" />

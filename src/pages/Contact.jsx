@@ -13,7 +13,7 @@ const infoRows = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'your@email.com', // TODO: insert real email
+    value: 'moaazelbedawy@email.com', // TODO: insert real email
     href: 'mailto:your@email.com', // TODO: insert real email
   },
   {
@@ -124,7 +124,7 @@ export default function Contact() {
           <div className="mt-6 flex gap-3">
             {/* TODO: insert real GitHub URL */}
             
-            <a  href="https://github.com/your-username"
+            <a  href="https://github.com/Elbedawy-dev"
               target="_blank"
               rel="noreferrer"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-text-secondary transition-all hover:border-border-active hover:bg-accent hover:text-text-primary"
@@ -132,7 +132,7 @@ export default function Contact() {
               <GithubIcon size={18} />
             </a>
             
-            <a  href="https://linkedin.com/in/moaaz-elbedawy"
+            <a href="https://linkedin.com/in/moaaz-elbedawy"
               target="_blank"
               rel="noreferrer"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-text-secondary transition-all hover:border-border-active hover:bg-accent hover:text-text-primary"

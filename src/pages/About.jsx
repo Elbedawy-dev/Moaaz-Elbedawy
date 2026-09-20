@@ -17,7 +17,7 @@ const personalInfo = [
   { label: 'Role', value: 'Full-Stack MERN Developer', icon: Briefcase },
   {
     label: 'Education',
-    value: 'CS Higher Diploma — Higher Institute for Statistical Studies and Research',
+    value: 'CS Higher Diploma - Higher Institute for Statistical Studies and Research',
     icon: GraduationCap,
   },
   { label: 'Languages', value: 'Arabic, English', icon: Globe },
@@ -51,7 +51,7 @@ const timeline = [
   {
     icon: GraduationCap,
     date: '1.5-Month Program',
-    title: 'NTI — Digital Egypt Youth Program',
+    title: 'NTI - Digital Egypt Youth Program',
     org: 'Web Designer Track',
     description:
       'Completed 120 hours of intensive training in HTML5, CSS3, JavaScript, and Bootstrap, scoring 88% on the program.',
@@ -67,7 +67,7 @@ const timeline = [
   {
     icon: Briefcase,
     date: 'Graduation Project',
-    title: '"Adan" — Graduation Project',
+    title: '"Adan" - Graduation Project',
     org: 'Full MERN-Stack Application',
     description:
       'Led the Front End entirely for a full MERN-stack graduation project, from architecture to UI implementation.',
@@ -105,13 +105,13 @@ export default function About() {
             ● About Me
           </p>
           <h1 className="mt-2 font-heading text-4xl font-extrabold tracking-heading text-text-primary sm:text-5xl">
-            CS Student &amp; Full-Stack Developer
+            CS Student &amp; Mearn - Stack Developer
           </h1>
           <p className="mt-5 max-w-2xl text-base text-text-secondary">
             I&apos;m a self-taught MERN stack developer, currently a Computer Science
             student at the Higher Institute for Statistical Studies and Research,
             pursuing a 2-year Higher Diploma with an expected graduation in 2026.
-            Alongside my studies, I build full-stack proficiency through hands-on
+            Alongside my studies, I build full-stack proficiency through hands - on
             projects — turning what I learn into real, working applications.
           </p>
         </motion.div>
