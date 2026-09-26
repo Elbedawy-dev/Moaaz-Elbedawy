@@ -9,7 +9,9 @@ const projects = [
   {
     title: 'Adan',
     subtitle: 'Graduation Project (MERN)',
-    description: 'graduation project, I was responsible for writing all the Front end code using React.',
+    description: 'A full MERN-stack graduation project where I owned the entire Front End, \
+    from architecture through UI using React.',
+    stack: ['React', 'Node'],
     live: 'https://adan-animals.vercel.app', 
     repo: 'https://github.com/Elbedawy-dev/Adan-Animals.git',
     image: adanImage
@@ -17,7 +19,9 @@ const projects = [
   {
     title: 'POS System',
     subtitle: 'Point of Sale application (MERN stack)',
-    description: 'A full MERN Stack Point of Sale system handling products, orders, and authentication, refined through fixing 20+ real production-level bugs.',
+    description: 'A full MERN Stack Point of Sale system handling products, orders, \
+    and authentication, refined through fixing 20+ real production-level bugs.',
+    stack: ['MongoDB', 'Express', 'React', 'Node'],
     live: 'https://pos-system-commercial.vercel.app', 
     repo: 'https://github.com/Elbedawy-dev/POS_System.git',
     image: posImage
@@ -25,14 +29,16 @@ const projects = [
   {
     title: 'Notes App',
     subtitle: 'Notes/Notepad application (MERN stack)',
-    description: 'A full MERN Stack notes app with JWT authentication, pinned notes, Cloudinary image uploads, and a dashboard tracking note statistics.',
+    description: 'A full MERN Stack notes app with JWT authentication, pinned notes, \
+    Cloudinary image uploads, and a dashboard tracking note statistics.',
+    stack: ['MongoDB', 'Express', 'React', 'Node'],
     live: 'https://notpad-flow.vercel.app',
     repo: 'https://github.com/Elbedawy-dev/NotPad.git',
     image: noteImg
   },
 ]
 
-const stack = ['MongoDB', 'Express', 'React', 'Node']
+
 
 export default function SelectedWorks() {
   return (
@@ -46,14 +52,17 @@ export default function SelectedWorks() {
         {projects.map((project) => (
           <article
             key={project.title}
-            className="overflow-hidden rounded-card border border-border bg-surface-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-border-active hover:shadow-card-hover"
+            className="group flex h-full flex-col overflow-hidden rounded-card border border-border
+              bg-surface-1 transition-all duration-300 hover:-translate-y-0.5
+              hover:border-border-active hover:shadow-card-hover min-w-0"
           >
             <div className="aspect-16/10 overflow-hidden bg-surface-2">
               {project.image ? (
                 <img
                   src={project.image}
                   alt={`${project.title} preview`}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-500 
+                  group-hover:scale-105"
                 />
               ) : (
                 <div className="flex h-full w-full items-center justify-center">
@@ -67,17 +76,17 @@ export default function SelectedWorks() {
                 {project.title}
               </h3>
               <p className="mt-2 text-sm text-text-secondary">{project.description}</p>
-              <div className="mt-4 flex flex-wrap gap-1.5">
-                {stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full border border-border bg-surface-2 px-2.5 
-                    py-0.5 font-mono text-[11px] text-text-secondary"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-border bg-surface-2 px-2.5 py-0.5
+                    font-mono text-[11px] text-text-secondary"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               <div className="mt-5 flex items-center gap-4 text-sm">
                 <a
                   href={project.live}

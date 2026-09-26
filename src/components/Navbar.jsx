@@ -54,7 +54,8 @@ export default function Navbar() {
             type="button"
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             className="flex h-9 w-9 items-center justify-center rounded-control border border-border
-            bg-surface-2 text-text-secondary transition-colors hover:border-border-active hover:text-text-primary"
+            bg-surface-2 text-text-secondary transition-colors hover:border-border-active 
+            hover:text-text-primary cursor-pointer"
             onClick={toggleTheme}
           >
             {theme === 'dark' ? <Moon size={16} /> : <Sun size={16} />}
@@ -67,7 +68,8 @@ export default function Navbar() {
               aria-label="Change accent color"
               aria-expanded={colorPickerOpen}
               className="flex h-9 w-9 items-center justify-center rounded-control border border-border
-              bg-surface-2 text-text-secondary transition-colors hover:border-border-active hover:text-text-primary"
+              bg-surface-2 text-text-secondary transition-colors hover:border-border-active 
+              hover:text-text-primary cursor-pointer"
               onClick={() => setColorPickerOpen((v) => !v)}
             >
               <Settings size={16} />

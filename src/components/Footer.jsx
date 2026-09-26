@@ -48,7 +48,7 @@ export default function Footer() {
           </a>
           {/* TODO: replace email href with Moaaz's real address */}
           <a
-            href="https://moaazelbedawy@email.com"
+            href="https://moaazelbedawy@gmail.com"
             aria-label="https://mail.google.com"
             className="flex h-10 w-10 items-center justify-center rounded-control border border-border text-text-secondary transition-colors hover:border-border-active hover:text-accent"
           >
