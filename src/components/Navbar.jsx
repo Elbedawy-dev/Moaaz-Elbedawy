@@ -31,12 +31,9 @@ export default function Navbar() {
   useEffect(() => {
     if (open) {
       const prevBodyOverflow = document.body.style.overflow
-      const prevHtmlOverflow = document.documentElement.style.overflow
       document.body.style.overflow = 'hidden'
-      document.documentElement.style.overflow = 'hidden'
       return () => {
         document.body.style.overflow = prevBodyOverflow
-        document.documentElement.style.overflow = prevHtmlOverflow
       }
     }
   }, [open])
@@ -64,7 +61,11 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 h-navbar border-b border-border-subdued bg-surface-1/80 backdrop-blur-md">
+      <header
+        className={`${
+          open ? 'fixed inset-x-0 top-0' : 'sticky top-0'
+        } z-50 h-navbar w-full border-b border-border-subdued bg-surface-1/80 backdrop-blur-md`}
+      >
         <div className="mx-auto flex h-full max-w-content items-center justify-between gap-4 px-5">
           <Logo compact />
 
@@ -160,6 +161,8 @@ export default function Navbar() {
           </div>
         </div>
       </header>
+      {/* Spacer keeps normal document flow height while header is temporarily fixed */}
+      {open && <div className="h-navbar" aria-hidden="true" />}
 
       {/* Mobile menu: dark overlay + backdrop blur + slide/fade-in panel.
           Rendered via React Portal directly into document.body to prevent the header's
