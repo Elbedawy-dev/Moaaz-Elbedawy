@@ -32,6 +32,7 @@ import {
   SiNextdotjs,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
+import { useTheme } from '../context/ThemeContext'
 
 // ─── Named icon wrappers ───────────────────────────────────────────────────
 
@@ -51,9 +52,12 @@ export function NodeIcon({ size = 28 }) {
   return <SiNodedotjs size={size} color="#5FA04E" aria-label="Node.js" />
 }
 
-export function ExpressIcon({ size = 28, isDark = true }) {
+export function ExpressIcon({ size = 28 }) {
   // Express has no single brand colour — white on dark, black on light.
-  return <SiExpress size={size} color={isDark ? '#FFFFFF' : '#000000'} aria-label="Express.js" />
+  // Read the active theme directly so every call-site stays correct
+  // automatically, with no need to remember to pass an `isDark` prop.
+  const { theme } = useTheme()
+  return <SiExpress size={size} color={theme === 'dark' ? '#FFFFFF' : '#000000'} aria-label="Express.js" />
 }
 
 export function MongoIcon({ size = 28 }) {
@@ -105,17 +109,17 @@ export function NextIcon({ size = 28 }) {
  * Map a plain-text technology name (e.g. "React", "Node.js", "Tailwind CSS")
  * to the matching branded icon component. Returns `null` if no match.
  *
- * `isDark` is forwarded to ExpressIcon so it can adapt its colour to the
- * current theme, but all other icons use fixed brand colours regardless.
+ * ExpressIcon reads the current theme itself (see above), so no `isDark`
+ * argument is needed here anymore.
  */
-export function getTechIcon(name, size = 16, isDark = true) {
+export function getTechIcon(name, size = 16) {
   const n = name.toLowerCase().replace(/[\s.]/g, '')
 
   if (n.includes('react') && !n.includes('native')) return <ReactIcon size={size} />
   if (n.includes('javascript') || n === 'js') return <JavaScriptIcon size={size} />
   if (n.includes('typescript') || n === 'ts') return <TypeScriptIcon size={size} />
   if (n.includes('node')) return <NodeIcon size={size} />
-  if (n.includes('express')) return <ExpressIcon size={size} isDark={isDark} />
+  if (n.includes('express')) return <ExpressIcon size={size} />
   if (n.includes('mongo')) return <MongoIcon size={size} />
   if (n.includes('html')) return <HtmlIcon size={size} />
   if (n.includes('tailwind')) return <TailwindIcon size={size} />

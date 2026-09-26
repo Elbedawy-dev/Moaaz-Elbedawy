@@ -1,66 +1,62 @@
-import noteImg from '../image/noteImage.jpg'
-import posImage from '../image/posImage.jpg'
-import adanImage from '../image/adanImage.jpg'
-import memoryImage from '../image/memoryImage.jpg'
-import socialImage from '../image/socialImage.jpg'
-import bloodImage from '../image/bloodImage.jpg'
-
 export const projects = [
   {
     title: 'Adan',
     category: 'fullstack',
-    description: 'A full MERN Stack graduation project where I owned the entire Front End, from architecture through UI using React.',
-    stack: ['React', 'Node.js'],
-    live: 'https://adan-animals.vercel.app', 
-    repo: 'https://github.com/Elbedawy-dev/Adan-Animals.git', 
+    description: 'Graduation project — a full MERN-stack application. Moaaz owned the entire Front End.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB'],
+    live: '#', // TODO: add live link
+    repo: '#', // TODO: add repo link
     featured: true,
-    image: adanImage
+    // TODO: add preview screenshot
   },
   {
     title: 'POS System',
     category: 'fullstack',
-    description: 'A full MERN Stack Point of Sale system handling products, orders, and authentication, refined through fixing 20+ production bugs.',
+    description: 'A Point of Sale application built with the MERN stack.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-    live: 'https://pos-system-commercial.vercel.app', 
-    repo: 'https://github.com/Elbedawy-dev/POS_System.git', 
+    live: '#', // TODO
+    repo: '#', // TODO
     featured: true,
-    image: posImage
+    // TODO: add preview screenshot
   },
   {
     title: 'Notes App',
     category: 'fullstack',
-    description: 'A full MERN Stack notes app with JWT authentication, pinned notes, Cloudinary uploads, and a dashboard tracking note statistics.',
+    description: 'A notes/notepad application built with the MERN stack.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-    live: 'https://notpad-flow.vercel.app',
-    repo: 'https://github.com/Elbedawy-dev/NotPad.git',
+    live: '#', // TODO
+    repo: '#', // TODO
     featured: true,
-    image: noteImg
+    // TODO: add preview screenshot
   },
   {
-    title: 'FlowNet',
-    category: 'fullstack',
-    description: 'A React and Vite social media app using Clerk authentication, Framer Motion animations, and a responsive sidebar navigation.',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-    live: 'https://flownet-elbedawy.vercel.app',
-    repo: 'https://github.com/Elbedawy-dev/FlowNet.git',
-    image: socialImage
+    title: 'Coffee Website',
+    category: 'frontend',
+    description: 'A front-end website design for a coffee brand.',
+    stack: ['HTML5', 'CSS3', 'JavaScript'],
+    live: '#', // TODO
+    repo: '#', // TODO
+    // TODO: add preview screenshot
+  },
+  {
+    title: 'Food Product Design',
+    category: 'frontend',
+    description: 'A front-end product design/landing page for a food brand.',
+    stack: ['HTML5', 'CSS3', 'JavaScript'],
+    live: '#', // TODO
+    repo: '#', // TODO
+    // TODO: add preview screenshot
   },
   {
     title: 'Memory Guess Game',
     category: 'frontend',
-    description: 'A browser-based memory matching game built with vanilla JavaScript, featuring flip animations, sound effects, and live score tracking.',
+    description: 'A browser-based memory/guessing game built with vanilla JavaScript.',
     stack: ['HTML5', 'CSS3', 'JavaScript'],
-    live: 'https://memorygame-image.vercel.app',
-    repo: 'https://github.com/Elbedawy-dev/MemoryGame.git',
-    image: memoryImage
+    live: '#', // TODO
+    repo: '#', // TODO
+    // TODO: add preview screenshot
   },
-  {
-    title: 'NabdHayah',
-    category: 'fullstack',
-    description: 'A MERN Stack platform matching blood donors with recipients by nearest location, featuring geolocation search, notifications.',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-    live: '#',
-    repo: '#',
-    image: bloodImage
-  },
+  // TODO (Moaaz): add the remaining ~12 HTML/CSS/JS projects here in the same
+  // shape — do NOT invent titles/descriptions for these, leave this comment
+  // as a reminder to fill them in with real project names and details.
 ]

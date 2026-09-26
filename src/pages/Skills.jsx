@@ -1,4 +1,5 @@
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useInView, useReducedMotion } from 'framer-motion'
+import { useRef } from 'react'
 import { Code2, Wrench, Boxes, Cpu } from 'lucide-react'
 import {
   ReactIcon,
@@ -56,15 +57,23 @@ function ProgressBar({ level, max = 5 }) {
   const reduceMotion = useReducedMotion()
   const percentage = Math.min(100, Math.max(0, level * 20))
 
+  // Watch the TRACK (has real width/height) instead of putting whileInView
+  // directly on the fill bar. The fill bar starts at width: 0, and on many
+  // mobile browsers a zero-width element's IntersectionObserver never
+  // reliably reports as "visible", so whileInView on it can silently never
+  // fire and the bar stays stuck at 0% forever on phones.
+  const trackRef = useRef(null)
+  const isInView = useInView(trackRef, { once: true, margin: '-10% 0px' })
+  const showFilled = reduceMotion || isInView
+
   return (
     <div className="mt-3">
       {/* Track */}
-      <div className="relative h-2 w-full overflow-hidden rounded-full bg-surface-2">
+      <div ref={trackRef} className="relative h-2 w-full overflow-hidden rounded-full bg-surface-2">
         {/* Animated fill bar */}
         <motion.div
-          initial={reduceMotion ? { width: `${percentage}%` } : { width: 0 }}
-          whileInView={{ width: `${percentage}%` }}
-          viewport={{ once: true, margin: '-50px' }}
+          initial={{ width: 0 }}
+          animate={{ width: showFilled ? `${percentage}%` : 0 }}
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
           className="relative h-full rounded-full bg-accent shadow-glow"
         >
