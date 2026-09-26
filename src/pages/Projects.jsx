@@ -43,8 +43,8 @@ export default function Projects() {
         Projects
       </h1>
       <p className="mt-3 max-w-xl text-text-secondary">
-        Real projects I have built end to end - from full MERN-stack
-        applications to focused front-end interfaces.
+        Real projects I have built end to end - from full MERN Stack
+        applications to focused front end interfaces.
       </p>
 
       <div className="mt-8">

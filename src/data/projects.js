@@ -9,7 +9,7 @@ export const projects = [
   {
     title: 'Adan',
     category: 'fullstack',
-    description: 'A full MERN-stack graduation project where I owned the entire Front End, from architecture through UI using React.',
+    description: 'A full MERN Stack graduation project where I owned the entire Front End, from architecture through UI using React.',
     stack: ['React', 'Node.js'],
     live: 'https://adan-animals.vercel.app', 
     repo: 'https://github.com/Elbedawy-dev/Adan-Animals.git', 
@@ -19,7 +19,7 @@ export const projects = [
   {
     title: 'POS System',
     category: 'fullstack',
-    description: 'A full MERN-stack Point of Sale system handling products, orders, and authentication, refined through fixing 20+ production bugs.',
+    description: 'A full MERN Stack Point of Sale system handling products, orders, and authentication, refined through fixing 20+ production bugs.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
     live: 'https://pos-system-commercial.vercel.app', 
     repo: 'https://github.com/Elbedawy-dev/POS_System.git', 
@@ -29,7 +29,7 @@ export const projects = [
   {
     title: 'Notes App',
     category: 'fullstack',
-    description: 'A full MERN-stack notes app with JWT authentication, pinned notes, Cloudinary uploads, and a dashboard tracking note statistics.',
+    description: 'A full MERN Stack notes app with JWT authentication, pinned notes, Cloudinary uploads, and a dashboard tracking note statistics.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
     live: 'https://notpad-flow.vercel.app',
     repo: 'https://github.com/Elbedawy-dev/NotPad.git',
@@ -57,7 +57,7 @@ export const projects = [
   {
     title: 'NabdHayah',
     category: 'fullstack',
-    description: 'A MERN-stack platform matching blood donors with recipients by nearest location, featuring geolocation search, notifications.',
+    description: 'A MERN Stack platform matching blood donors with recipients by nearest location, featuring geolocation search, notifications.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
     live: '#',
     repo: '#',

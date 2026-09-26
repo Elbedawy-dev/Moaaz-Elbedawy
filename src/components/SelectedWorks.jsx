@@ -9,7 +9,7 @@ const projects = [
   {
     title: 'Adan',
     subtitle: 'Graduation Project (MERN)',
-    description: 'A full MERN-stack graduation project where I owned the entire Front End, \
+    description: 'A full MERN Stack graduation project where I owned the entire Front End, \
     from architecture through UI using React.',
     stack: ['React', 'Node'],
     live: 'https://adan-animals.vercel.app', 

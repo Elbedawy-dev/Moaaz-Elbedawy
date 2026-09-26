@@ -12,7 +12,7 @@ export default function Footer() {
           <Logo />
           <p className="max-w-sm text-sm text-text-secondary">
             Computer Science Student & MERN Stack Developer,   
-            building real-world web applications through hands - on projects.
+            building real world web applications through hands - on projects.
           </p>
         </div>
 

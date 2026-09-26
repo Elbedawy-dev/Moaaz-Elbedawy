@@ -14,7 +14,7 @@ const CV_URL = CV
 
 const personalInfo = [
   { label: 'Name', value: 'Moaaz Elbedawy' },
-  { label: 'Role', value: 'Full-Stack MERN Developer', icon: Briefcase },
+  { label: 'Role', value: 'MERN Stack Developer', icon: Briefcase },
   {
     label: 'Education',
     value: 'CS Higher Diploma - Higher Institute for Statistical Studies and Research',
@@ -61,7 +61,7 @@ const timeline = [
     icon: GraduationCap,
     date: 'Expected 2026',
     title: 'Higher Institute for Statistical Studies and Research',
-    org: 'Computer Science — Higher Diploma',
+    org: 'Computer Science - Higher Diploma',
     description:
       '2-year Higher Diploma program building a strong foundation in computer science and \
        software development.',
@@ -81,7 +81,7 @@ const timeline = [
     title: 'Freelance MERN Stack Developer',
     org: 'Independent Projects',
     description:
-      'Building real-world projects like a POS System and Notes App, applying React, \
+      'Building real world projects like a POS System and Notes App, applying React, \
        Node.js, Express, and MongoDB end to end.',
   },
 ]
@@ -112,11 +112,9 @@ return (
           CS Student &amp; Mearn - Stack Developer
         </h1>
         <p className="mt-5 max-w-2xl text-base text-text-secondary">
-          I am a self-taught MERN stack software developer, currently studying computer
-          science at the Graduate School of Statistical Research, pursuing a two-year 
-          postgraduate diploma with expected graduation in 2026. Alongside my studies, 
-          I am building full proficiency in software development through practical 
-          projects - turning what I learn into real, workable applications.
+          I am a computer science student at the Graduate School of Statistical Research. 
+          I am a  MERN Stack web developer, specializing in creating commercial and educational 
+          systems and websites.
         </p>
       </motion.div>
     </section>

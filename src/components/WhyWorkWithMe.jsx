@@ -19,7 +19,7 @@ const points = [
   {
     icon: GraduationCap,
     title: 'Continuous Learner',
-    body: 'Currently completing a Computer Science diploma while actively building production-style MERN projects.',
+    body: 'Currently completing a Computer Science diploma while actively building production style MERN projects.',
   },
 ]
 
