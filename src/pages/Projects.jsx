@@ -6,7 +6,6 @@ import ProjectFilters from "../components/ProjectFilters";
 import { GithubIcon } from "../components/SocialIcons";
 import { projects } from "../data/projects";
 
-// Human-readable label for each category id used in data/projects.js
 const CATEGORY_LABELS = {
   fullstack: "Full-Stack (MERN)",
   frontend: "Frontend",
@@ -16,15 +15,13 @@ export default function Projects() {
   const reduceMotion = useReducedMotion();
   const [activeFilter, setActiveFilter] = useState("all");
 
-  // Filter the real projects by the selected tab. "all" shows everything.
   const visibleProjects = useMemo(
     () =>
       activeFilter === "all" ? projects : projects
-      .filter((project) => project.category === activeFilter),
+        .filter((project) => project.category === activeFilter),
     [activeFilter],
   );
 
-  // Stagger the cards in as they appear when the filter changes.
   const containerVariants = {
     hidden: {},
     show: {
@@ -46,7 +43,7 @@ export default function Projects() {
         Projects
       </h1>
       <p className="mt-3 max-w-xl text-text-secondary">
-        Real projects I have built end to end — from full MERN-stack
+        Real projects I have built end to end - from full MERN-stack
         applications to focused front-end interfaces.
       </p>
 
@@ -70,9 +67,9 @@ export default function Projects() {
               <motion.article
                 key={project.title}
                 variants={cardVariants}
-                className="flex flex-col overflow-hidden rounded-card border border-border 
-                bg-surface-1 transition-all duration-300 hover:-translate-y-0.5 
-                hover:border-border-active hover:shadow-card-hover"
+                className="group flex h-full flex-col overflow-hidden rounded-card border border-border
+              bg-surface-1 transition-all duration-300 hover:-translate-y-0.5
+              hover:border-border-active hover:shadow-card-hover min-w-0"
               >
                 <div className="aspect-16/10 overflow-hidden bg-surface-2">
                   {project.image ? (
@@ -88,7 +85,7 @@ export default function Projects() {
                   )}
                 </div>
 
-                <div className="flex flex-1 flex-col p-5">
+                <div className="flex flex-1 flex-col p-5 min-w-0">
                   <p className="font-mono text-[11px] text-accent">
                     {CATEGORY_LABELS[project.category] ?? project.category}
                   </p>
@@ -103,8 +100,8 @@ export default function Projects() {
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded-full border border-border bg-surface-2 px-2.5 py-0.5 
-                        font-mono text-[11px] text-text-secondary"
+                        className="rounded-full border border-border bg-surface-2 px-2.5 py-0.5
+                      font-mono text-[11px] text-text-secondary"
                       >
                         {tech}
                       </span>
@@ -113,37 +110,31 @@ export default function Projects() {
 
                   <div className="mt-auto flex items-center gap-4 pt-5 text-sm">
                     {hasLive ? (
-                      <a
-                        href={project.live}
+                      
+                    <a href={project.live}
                         target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1 text-accent transition-colors
-                        hover:text-accent-hover"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-accent hover:text-accent-hover transition-colors"
                       >
-                        Live Demo
-                        <ArrowUpRight size={14} />
+                        Live Demo <ArrowUpRight size={14} />
                       </a>
                     ) : (
-                      <span className="inline-flex items-center gap-1 text-text-tertiary">
-                        Live Demo (soon)
-                        <ArrowUpRight size={14} />
+                      <span className="flex items-center gap-1 text-text-tertiary">
+                        Live Demo (soon) <ArrowUpRight size={14} />
                       </span>
                     )}
-
                     {hasRepo ? (
-                      <a
-                        href={project.repo}
+                      
+                    <a href={project.repo}
                         target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1 text-text-secondary transition-colors hover:text-text-primary"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-text-secondary hover:text-text-primary transition-colors"
                       >
-                        <GithubIcon size={14} />
-                        Code
+                        Code <GithubIcon className="h-3.5 w-3.5" />
                       </a>
                     ) : (
-                      <span className="inline-flex items-center gap-1 text-text-tertiary">
-                        <GithubIcon size={14} />
-                        Code (soon)
+                      <span className="flex items-center gap-1 text-text-tertiary">
+                        Code (soon) <GithubIcon className="h-3.5 w-3.5" />
                       </span>
                     )}
                   </div>
@@ -153,8 +144,8 @@ export default function Projects() {
           })}
         </motion.div>
       ) : (
-        <div className="mt-8 rounded-card border border-border bg-surface-1 
-        px-6 py-12 text-center">
+        <div className="mt-8 rounded-card border border-border bg-surface-1
+      px-6 py-12 text-center">
           <p className="text-text-secondary">
             No projects in this category yet.
           </p>
@@ -162,8 +153,6 @@ export default function Projects() {
       )}
 
       <p className="mt-8 text-sm text-text-secondary">
-        {/* TODO (Moaaz): the ~12 smaller HTML/CSS/JS projects still need real names,
-            descriptions and links — once added to data/projects.js they show up here. */}
         ~12 more front-end projects (HTML, CSS, JavaScript) are being documented
         and will appear here soon.{" "}
         <Link to="/contact" className="text-accent hover:text-accent-hover">

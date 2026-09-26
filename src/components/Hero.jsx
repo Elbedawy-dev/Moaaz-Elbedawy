@@ -31,12 +31,12 @@ export default function Hero() {
           <span className="text-accent"> Mearn</span> Stack {' '}
           <span className="text-accent">Web</span> Develober.
         </h1>
-    {/* I'm Mearn Stack Web Develober */}
-        <p className="mt-5 max-w-xl text-base text-text-secondary">
-          Hi, I&apos;m <strong className="font-semibold text-text-primary">Moaaz Elbedawy</strong>{' '}
-          - a Computer Science student and Full-Stack MERN Developer, building real - world
-          web applications through hands - on projects using React, Node.js, Express, and
-          MongoDB.
+        {/* I'm Mearn Stack Web Develober */}
+        <p className="mt-5 max-w-2xl text-base text-text-secondary">
+          I'm Moaaz Elbedawy, a full-stack MERN developer specializing in building
+          web applications for the education and e-commerce sectors — from
+          learning platforms and tutoring marketplaces to point-of-sale and
+          online store systems.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">

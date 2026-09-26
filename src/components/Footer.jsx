@@ -11,8 +11,8 @@ export default function Footer() {
         <div className="space-y-4">
           <Logo />
           <p className="max-w-sm text-sm text-text-secondary">
-            Computer Science Student & Full-Stack MERN Developer, building real-world
-            web applications through hands - on projects.
+            Computer Science Student & MERN Stack Developer,   
+            building real-world web applications through hands - on projects.
           </p>
         </div>
 

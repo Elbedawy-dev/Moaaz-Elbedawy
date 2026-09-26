@@ -9,8 +9,8 @@ export const projects = [
   {
     title: 'Adan',
     category: 'fullstack',
-    description: 'Graduation project - a full MERN-stack application. Moaaz owned the entire Front End.',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB'],
+    description: 'A full MERN-stack graduation project where I owned the entire Front End, from architecture through UI using React.',
+    stack: ['React', 'Node.js'],
     live: 'https://adan-animals.vercel.app', 
     repo: 'https://github.com/Elbedawy-dev/Adan-Animals.git', 
     featured: true,
@@ -19,7 +19,7 @@ export const projects = [
   {
     title: 'POS System',
     category: 'fullstack',
-    description: 'A Point of Sale application built with the MERN stack.',
+    description: 'A full MERN-stack Point of Sale system handling products, orders, and authentication, refined through fixing 20+ production bugs.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
     live: 'https://pos-system-commercial.vercel.app', 
     repo: 'https://github.com/Elbedawy-dev/POS_System.git', 
@@ -29,7 +29,7 @@ export const projects = [
   {
     title: 'Notes App',
     category: 'fullstack',
-    description: 'A notes/notepad application built with the MERN stack.',
+    description: 'A full MERN-stack notes app with JWT authentication, pinned notes, Cloudinary uploads, and a dashboard tracking note statistics.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
     live: 'https://notpad-flow.vercel.app',
     repo: 'https://github.com/Elbedawy-dev/NotPad.git',
@@ -39,8 +39,8 @@ export const projects = [
   {
     title: 'FlowNet',
     category: 'fullstack',
-    description: 'A front-end website design for a coffee brand.',
-    stack: ['HTML5', 'CSS3', 'JavaScript'],
+    description: 'A React and Vite social media app using Clerk authentication, Framer Motion animations, and a responsive sidebar navigation.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB'],
     live: 'https://flownet-elbedawy.vercel.app',
     repo: 'https://github.com/Elbedawy-dev/FlowNet.git',
     image: socialImage
@@ -48,7 +48,7 @@ export const projects = [
   {
     title: 'Memory Guess Game',
     category: 'frontend',
-    description: 'A browser-based memory/guessing game built with vanilla JavaScript.',
+    description: 'A browser-based memory matching game built with vanilla JavaScript, featuring flip animations, sound effects, and live score tracking.',
     stack: ['HTML5', 'CSS3', 'JavaScript'],
     live: 'https://memorygame-image.vercel.app',
     repo: 'https://github.com/Elbedawy-dev/MemoryGame.git',
@@ -57,10 +57,10 @@ export const projects = [
   {
     title: 'NabdHayah',
     category: 'fullstack',
-    description: 'A front-end product design/landing page for a food brand.',
-    stack: ['HTML5', 'CSS3', 'JavaScript'],
-    live: '#', 
-    repo: '#', 
+    description: 'A MERN-stack platform matching blood donors with recipients by nearest location, featuring geolocation search, notifications.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB'],
+    live: '#',
+    repo: '#',
     image: bloodImage
   },
 ]

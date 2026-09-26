@@ -3,8 +3,6 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { Mail, MapPin, Clock, Send } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from '../components/SocialIcons'
 
-// TODO: replace with your real Formspree form ID.
-// Sign up free at https://formspree.io, create a form, paste the ID here.
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
 
 const infoRows = [
@@ -13,8 +11,8 @@ const infoRows = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'moaazelbedawy@email.com', // TODO: insert real email
-    href: 'mailto:your@email.com', // TODO: insert real email
+    value: 'moaazelbedawy@email.com', 
+    href: 'mailto:your@email.com', 
   },
   {
     icon: LinkedinIcon,
@@ -29,7 +27,7 @@ const initialForm = { name: '', email: '', subject: '', message: '' }
 export default function Contact() {
   const reduceMotion = useReducedMotion()
   const [form, setForm] = useState(initialForm)
-  const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [status, setStatus] = useState('idle')
 
   function handleChange(e) {
     const { name, value } = e.target

@@ -6,10 +6,11 @@ import { createContext, useContext, useEffect, useState, useCallback } from 'rea
 // in the gear picker.
 export const ACCENTS = [
   { id: 'orange', name: 'Burnt Orange', rgb: '193 87 31', hoverRgb: '217 102 40' },
-  { id: 'blue', name: 'Steel Blue', rgb: '91 124 153', hoverRgb: '108 145 176' },
-  { id: 'sage', name: 'Sage Green', rgb: '138 154 126', hoverRgb: '158 174 146' },
-  { id: 'violet', name: 'Muted Violet', rgb: '124 124 155', hoverRgb: '145 145 178' },
-  { id: 'rose', name: 'Dusty Rose', rgb: '155 107 122', hoverRgb: '175 127 142' },
+  { id: 'blue', name: 'Electric Blue', rgb: '59 130 246', hoverRgb: '96 165 250' },
+  { id: 'emerald', name: 'Emerald', rgb: '16 185 129', hoverRgb: '52 211 153' },
+  { id: 'violet', name: 'Violet', rgb: '139 92 246', hoverRgb: '167 139 250' },
+  { id: 'rose', name: 'Rose', rgb: '244 63 94', hoverRgb: '251 113 133' },
+  { id: 'amber', name: 'Amber', rgb: '245 158 11', hoverRgb: '251 191 36' },
 ]
 
 const ThemeContext = createContext(null)

@@ -90,8 +90,9 @@ export default function Skills() {
           Skills &amp; Tools
         </h1>
         <p className="mt-4 max-w-2xl text-base text-text-secondary">
-          A MERN-stack foundation built through hands - on projects, backed by
-          structured training in HTML, CSS, JavaScript, and modern tooling.
+          A practical MERN Stack toolkit shaped by real projects - from building
+          full authentication systems and RESTful APIs to debugging production grade
+          bugs and shipping polished, animated interfaces.
         </p>
       </motion.div>
 
@@ -101,7 +102,7 @@ export default function Skills() {
       </div>
 
       <div className="mt-12 border-t border-border pt-6">
-        <p className="inline-flex items-center gap-2 text-sm italic text-text-tertiary">
+        <p className="inline-flex items-center gap-2 text-sm text-text-tertiary">
           <Boxes size={14} className="text-accent" />
           {/* TODO: confirm what you're currently learning before this ships */}
           Currently deepening: TypeScript, Next.js

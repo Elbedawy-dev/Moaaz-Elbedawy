@@ -9,7 +9,7 @@ const projects = [
   {
     title: 'Adan',
     subtitle: 'Graduation Project (MERN)',
-    description: 'Graduation project on the MERN stack. Entire front end owned by Moaaz.',
+    description: 'graduation project, I was responsible for writing all the Front end code using React.',
     live: 'https://adan-animals.vercel.app', 
     repo: 'https://github.com/Elbedawy-dev/Adan-Animals.git',
     image: adanImage
@@ -17,7 +17,7 @@ const projects = [
   {
     title: 'POS System',
     subtitle: 'Point of Sale application (MERN stack)',
-    description: 'Point of Sale application (MERN stack).',
+    description: 'A full MERN Stack Point of Sale system handling products, orders, and authentication, refined through fixing 20+ real production-level bugs.',
     live: 'https://pos-system-commercial.vercel.app', 
     repo: 'https://github.com/Elbedawy-dev/POS_System.git',
     image: posImage
@@ -25,7 +25,7 @@ const projects = [
   {
     title: 'Notes App',
     subtitle: 'Notes/Notepad application (MERN stack)',
-    description: 'Notes/Notepad application (MERN stack).',
+    description: 'A full MERN Stack notes app with JWT authentication, pinned notes, Cloudinary image uploads, and a dashboard tracking note statistics.',
     live: 'https://notpad-flow.vercel.app',
     repo: 'https://github.com/Elbedawy-dev/NotPad.git',
     image: noteImg
