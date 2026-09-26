@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import ProjectFilters from "../components/ProjectFilters";
 import { GithubIcon } from "../components/SocialIcons";
+import { getTechIcon } from "../components/TechIcons";
 import { projects } from "../data/projects";
 
 const CATEGORY_LABELS = {
@@ -64,12 +65,12 @@ export default function Projects() {
             const hasRepo = project.repo && project.repo !== "#";
 
             return (
-              <motion.article
+              <motion.article 
                 key={project.title}
                 variants={cardVariants}
-                className="group flex h-full flex-col overflow-hidden rounded-card border border-border
-              bg-surface-1 transition-all duration-300 hover:-translate-y-0.5
-              hover:border-border-active hover:shadow-card-hover min-w-0"
+                className="group flex h-full flex-col overflow-hidden rounded-card border-2 border-border/80
+              bg-surface-1/95 transition-all duration-300 hover:-translate-y-1.5
+              hover:border-accent hover:shadow-card-hover min-w-0"
               >
                 <div className="aspect-16/10 overflow-hidden bg-surface-2">
                   {project.image ? (
@@ -86,26 +87,30 @@ export default function Projects() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-5 min-w-0">
-                  <p className="font-mono text-[11px] text-accent">
+                  <p className="font-mono text-[11px] font-semibold text-accent">
                     {CATEGORY_LABELS[project.category] ?? project.category}
                   </p>
-                  <h2 className="mt-1 font-heading text-xl font-bold tracking-heading">
+                  <h2 className="mt-1 font-heading text-xl font-bold tracking-heading text-text-primary">
                     {project.title}
                   </h2>
-                  <p className="mt-2 text-sm text-text-secondary">
+                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">
                     {project.description}
                   </p>
 
                   <div className="mt-4 flex flex-wrap gap-1.5">
-                    {project.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-full border border-border bg-surface-2 px-2.5 py-0.5
-                      font-mono text-[11px] text-text-secondary"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                    {project.stack.map((tech) => {
+                      const icon = getTechIcon(tech, 13);
+                      return (
+                        <span
+                          key={tech}
+                          className="inline-flex items-center gap-1.5 rounded-full border border-border/80 bg-surface-2 px-2.5 py-0.5
+                        font-mono text-[11px] text-text-secondary hover:border-accent/40"
+                        >
+                          {icon}
+                          {tech}
+                        </span>
+                      );
+                    })}
                   </div>
 
                   <div className="mt-auto flex items-center gap-4 pt-5 text-sm">

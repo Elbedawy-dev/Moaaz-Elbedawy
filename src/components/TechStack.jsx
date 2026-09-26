@@ -1,5 +1,9 @@
+import { Code2, Server, Database } from 'lucide-react'
+import { getTechIcon } from './TechIcons'
+
 const categories = [
   {
+    icon: Code2,
     title: 'Frontend',
     items: [
       { name: 'React.js', highlight: true },
@@ -11,6 +15,7 @@ const categories = [
     ],
   },
   {
+    icon: Server,
     title: 'Backend',
     items: [
       { name: 'Node.js', highlight: true },
@@ -19,6 +24,7 @@ const categories = [
     ],
   },
   {
+    icon: Database,
     title: 'Database & Tools',
     items: [
       { name: 'MongoDB', highlight: true },
@@ -32,36 +38,67 @@ const categories = [
 export default function TechStack() {
   return (
     <section className="mx-auto max-w-content px-5 py-16 lg:py-20">
-      <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">
+      <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-accent">
         What I Work With
       </p>
       <h2 className="mt-2 font-heading text-3xl font-extrabold tracking-heading text-text-primary">
         Core Tech Stack
       </h2>
 
-      <div className="mt-8 grid gap-5 md:grid-cols-3">
-        {categories.map((category) => (
-          <article
-            key={category.title}
-            className="rounded-card border border-border bg-surface-1 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-border-active hover:shadow-card-hover"
-          >
-            <h3 className="font-heading text-lg font-bold tracking-heading">{category.title}</h3>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {category.items.map((item) => (
+      <div className="mt-8 grid gap-6 md:grid-cols-3">
+        {categories.map((category) => {
+          const CategoryIcon = category.icon
+          return (
+            <article
+              key={category.title}
+              className="
+                group relative flex flex-col rounded-card
+                border-2 border-border/80 bg-surface-1/95 p-6
+                transition-all duration-300
+                hover:-translate-y-1.5 hover:border-accent hover:shadow-card-hover
+              "
+            >
+              <div className="flex items-center gap-3">
                 <span
-                  key={item.name}
-                  className={`rounded-full border px-3 py-1 font-mono text-xs ${
-                    item.highlight
-                      ? 'border-border-active bg-accent-subtle text-accent'
-                      : 'border-border bg-surface-2 text-text-secondary'
-                  }`}
+                  className="
+                    flex h-10 w-10 items-center justify-center
+                    rounded-control border-2 border-border-active/40
+                    bg-accent-subtle text-accent shadow-xs
+                    transition-all duration-300 group-hover:scale-110 group-hover:border-border-active group-hover:shadow-glow
+                  "
                 >
-                  {item.name}
+                  <CategoryIcon size={18} />
                 </span>
-              ))}
-            </div>
-          </article>
-        ))}
+                <h3 className="font-heading text-lg font-bold tracking-heading text-text-primary">
+                  {category.title}
+                </h3>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {category.items.map((item) => {
+                  const icon = getTechIcon(item.name, 14)
+                  return (
+                    <span
+                      key={item.name}
+                      className={`
+                        inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-xs
+                        transition-colors duration-200
+                        ${
+                          item.highlight
+                            ? 'border-accent bg-accent-subtle text-accent font-semibold shadow-xs'
+                            : 'border-border/80 bg-surface-2 text-text-secondary hover:border-accent/40'
+                        }
+                      `}
+                    >
+                      {icon}
+                      {item.name}
+                    </span>
+                  )
+                })}
+              </div>
+            </article>
+          )
+        })}
       </div>
     </section>
   )

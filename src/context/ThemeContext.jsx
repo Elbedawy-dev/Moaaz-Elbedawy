@@ -5,7 +5,7 @@ import { createContext, useContext, useEffect, useState, useCallback } from 'rea
 // --color-accent-hover. Add/remove entries here to change what shows up
 // in the gear picker.
 export const ACCENTS = [
-  { id: 'orange', name: 'Burnt Orange', rgb: '193 87 31', hoverRgb: '217 102 40' },
+  { id: 'orange', name: 'Fiery Orange', rgb: '255 69 0', hoverRgb: '255 94 36' },
   { id: 'blue', name: 'Electric Blue', rgb: '59 130 246', hoverRgb: '96 165 250' },
   { id: 'emerald', name: 'Emerald', rgb: '16 185 129', hoverRgb: '52 211 153' },
   { id: 'violet', name: 'Violet', rgb: '139 92 246', hoverRgb: '167 139 250' },

@@ -14,8 +14,8 @@
   --color-text-secondary: 212 212 216;
   --color-text-tertiary: 161 161 170;
 
-  --color-accent: 193 87 31;
-  --color-accent-hover: 217 102 40;
+  --color-accent: 255 69 0;
+  --color-accent-hover: 255 94 36;
 }
 
 :root[data-theme="light"] {

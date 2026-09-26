@@ -4,9 +4,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Every token now points at a CSS custom property (set in index.css)
-        // instead of a hardcoded hex value. The `<alpha-value>` placeholder
-        // keeps Tailwind's opacity modifiers working (e.g. bg-surface-1/80).
         background: 'rgb(var(--color-background) / <alpha-value>)',
         'surface-1': 'rgb(var(--color-surface-1) / <alpha-value>)',
         'surface-2': 'rgb(var(--color-surface-2) / <alpha-value>)',
@@ -24,14 +21,14 @@ export default {
         accent: {
           DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
           hover: 'rgb(var(--color-accent-hover) / <alpha-value>)',
-          subtle: 'rgb(var(--color-accent) / 0.12)',
+          subtle: 'rgb(var(--color-accent) / 0.16)',
         },
       },
       fontFamily: {
-       
-      }, heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+      },
       letterSpacing: {
         heading: '-0.025em',
         'heading-tight': '-0.03em',
@@ -44,11 +41,9 @@ export default {
         control: '8px',
       },
       boxShadow: {
-        // These now recompute automatically whenever --color-accent changes,
-        // since the CSS var is resolved at paint time, not build time.
-        'card-hover': '0 8px 30px -8px rgb(var(--color-accent) / 0.18)',
-        glow: '0 0 24px rgb(var(--color-accent) / 0.3)',
-        'glow-strong': '0 0 32px rgb(var(--color-accent) / 0.45)',
+        'card-hover': '0 0 28px -2px rgb(var(--color-accent) / 0.38), 0 10px 24px -6px rgb(var(--color-accent) / 0.22)',
+        glow: '0 0 28px rgb(var(--color-accent) / 0.45)',
+        'glow-strong': '0 0 42px rgb(var(--color-accent) / 0.65)',
       },
       height: {
         navbar: '64px',

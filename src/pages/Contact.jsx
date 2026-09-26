@@ -147,7 +147,7 @@ export default function Contact() {
             delay: 0.1,
           }}
         >
-          <div className="rounded-card border border-border bg-surface-1 p-6">
+          <div className="rounded-card border-2 border-border/80 bg-surface-1/95 p-6 shadow-xs">
             <dl className="flex flex-col divide-y divide-border">
 
               {infoRows.map((row) => {
@@ -155,11 +155,11 @@ export default function Contact() {
 
                 const content = (
                   <>
-                    <dt className="text-xs text-text-tertiary">
+                    <dt className="text-xs font-medium text-text-tertiary">
                       {row.label}
                     </dt>
 
-                    <dd className="mt-0.5 text-sm font-medium text-text-primary">
+                    <dd className="mt-0.5 text-sm font-semibold text-text-primary">
                       {row.value}
                     </dd>
                   </>
@@ -168,12 +168,12 @@ export default function Contact() {
                 return (
                   <div
                     key={row.label}
-                    className="flex items-center gap-3 py-4 first:pt-0 last:pb-0"
+                    className="flex items-center gap-3.5 py-4 first:pt-0 last:pb-0"
                   >
                     <span
-                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-control border border-border-active bg-accent-subtle text-accent"
+                      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-control border-2 border-border-active/40 bg-accent-subtle text-accent shadow-xs"
                     >
-                      <Icon size={16} />
+                      <Icon size={18} />
                     </span>
 
                     {row.href ? (
@@ -242,7 +242,7 @@ export default function Contact() {
             duration: 0.5,
             delay: 0.15,
           }}
-          className="rounded-card border border-border bg-surface-1 p-6"
+          className="rounded-card border-2 border-border/80 bg-surface-1/95 p-6 shadow-card-hover"
         >
           <div className="flex flex-col gap-4">
 
