@@ -41,9 +41,9 @@ export default {
         control: '8px',
       },
       boxShadow: {
-        'card-hover': '0 0 28px -2px rgb(var(--color-accent) / 0.38), 0 10px 24px -6px rgb(var(--color-accent) / 0.22)',
-        glow: '0 0 28px rgb(var(--color-accent) / 0.45)',
-        'glow-strong': '0 0 42px rgb(var(--color-accent) / 0.65)',
+        'card-hover': '0 8px 30px -8px rgb(var(--color-accent) / var(--shadow-opacity-soft))',
+        glow: '0 0 24px rgb(var(--color-accent) / var(--shadow-opacity-glow))',
+        'glow-strong': '0 0 32px rgb(var(--color-accent) / var(--shadow-opacity-glow-strong))',
       },
       height: {
         navbar: '64px',

@@ -1,0 +1,253 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "نبذة عني",
+    "projects": "المشاريع",
+    "skills": "المهارات",
+    "contact": "تواصل",
+    "getInTouch": "تواصل معي",
+    "primaryAria": "التنقل الرئيسي",
+    "mobileAria": "قائمة الجوال",
+    "switchToLight": "التبديل إلى الوضع الفاتح",
+    "switchToDark": "التبديل إلى الوضع الداكن",
+    "changeAccent": "تغيير لون التمييز",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "language": "اللغة",
+    "langEn": "EN",
+    "langAr": "AR"
+  },
+  "accents": {
+    "orange": "برتقالي ناري",
+    "blue": "أزرق كهربائي",
+    "emerald": "زمردي",
+    "violet": "بنفسجي",
+    "rose": "وردي",
+    "amber": "كهرماني"
+  },
+  "common": {
+    "downloadCV": "تحميل السيرة الذاتية",
+    "liveDemo": "عرض مباشر",
+    "liveDemoSoon": "عرض مباشر (قريبًا)",
+    "code": "الكود",
+    "codeSoon": "الكود (قريبًا)",
+    "previewAlt": "معاينة {{title}}"
+  },
+  "home": {
+    "hero": {
+      "badge": "متاح للعمل الحر والدوام الكامل",
+      "title": "أنا مطور <1>ويب</1> متخصص في <0>MERN</0> Stack.",
+      "description": "أنا معاذ البديوي، مطور MERN Stack متخصص في بناء تطبيقات الويب لقطاعي التعليم والتجارة الإلكترونية - من منصات التعلم وأسواق الدروس الخصوصية إلى أنظمة نقاط البيع والمتاجر الإلكترونية.",
+      "exploreWorks": "استكشف الأعمال المختارة",
+      "coreTech": "التقنيات الأساسية",
+      "cleanCode": "كود نظيف",
+      "mernSpecialist": "متخصص MERN",
+      "handsOnLearner": "أتعلم بالممارسة",
+      "browserHandle": "moaaz.elbedawy//mern-stack",
+      "openToWork": "متاح للعمل",
+      "photoAlt": "Moaaz Elbedawy",
+      "floatingStatValue": "+3 مشاريع MERN كاملة",
+      "floatingStatLabel": "مشاريع بمستوى إنتاجي"
+    },
+    "stats": {
+      "mern": {
+        "label": "مشاريع MERN Stack",
+        "sublabel": "Adan, POS System, Notes App"
+      },
+      "total": {
+        "label": "إجمالي المشاريع المنجزة",
+        "sublabel": "Full-stack والواجهة الأمامية"
+      },
+      "training": {
+        "label": "تدريب مكثف",
+        "sublabel": "برنامج مصر الرقمية – NTI"
+      },
+      "score": {
+        "label": "درجة البرنامج",
+        "sublabel": "مسار مصمم الويب – NTI"
+      }
+    },
+    "techStack": {
+      "eyebrow": "ما أعمل به",
+      "title": "مجموعة التقنيات الأساسية",
+      "frontend": "الواجهة الأمامية",
+      "backend": "الخلفية",
+      "databaseTools": "قواعد البيانات والأدوات"
+    },
+    "selectedWorks": {
+      "eyebrow": "أعمال مختارة",
+      "title": "أعمال مختارة",
+      "moreFrontend": "+15 مشروعًا إضافيًا للواجهة الأمامية (HTML, CSS, JavaScript)"
+    },
+    "why": {
+      "eyebrow": "القيمة",
+      "title": "لماذا تعمل معي",
+      "communication": {
+        "title": "تواصل واضح",
+        "body": "تحديثات منتظمة وتوفر مباشر خلال ساعات العمل المتفق عليها."
+      },
+      "cleanCode": {
+        "title": "كود نظيف وقابل للقراءة",
+        "body": "كل مشروع يتبع ممارسات برمجية منظمة وقابلة للصيانة - وليس مجرد كود «يعمل فحسب»."
+      },
+      "problemSolver": {
+        "title": "حل المشكلات بالممارسة",
+        "body": "أتعلم وأبني من خلال مشاريع حقيقية بدلًا من الشروحات السلبية."
+      },
+      "learner": {
+        "title": "متعلم مستمر",
+        "body": "أكمل حاليًا دبلوم علوم الحاسب بينما أبني بنشاط مشاريع MERN بأسلوب إنتاجي."
+      }
+    },
+    "cta": {
+      "headline": "هل لديك مشروع في ذهنك أو تبحث عن مطور full-stack للانضمام إلى فريقك؟",
+      "text": "متاح لتعاقدات العمل الحر وفرص الدوام الكامل.",
+      "getInTouch": "تواصل معي",
+      "readBio": "اقرأ النبذة"
+    }
+  },
+  "about": {
+    "eyebrow": "نبذة عني",
+    "title": "طالب علوم حاسب ومطور MERN Stack",
+    "intro": "أنا طالب علوم حاسب في كلية الدراسات العليا للبحوث الإحصائيه. أنا مطور ويب متخصص في MERN Stack، وأتخصص في إنشاء الأنظمة والمواقع التجارية والتعليمية.",
+    "personalInfo": "المعلومات الشخصية",
+    "info": {
+      "name": "الاسم",
+      "role": "الدور",
+      "education": "التعليم",
+      "languages": "اللغات",
+      "availability": "التوفر",
+      "roleValue": "مطور MERN Stack",
+      "educationValue": "دبلوم عالٍ في علوم الحاسب - كلية الدراسات العليا للبحوث الإحصائيه",
+      "languagesValue": "العربية، الإنجليزية",
+      "availabilityValue": "عمل حر ودوام كامل"
+    },
+    "stats": {
+      "mern": {
+        "label": "مشاريع MERN Stack كاملة",
+        "sublabel": "Adan, POS System, Notes App"
+      },
+      "frontend": {
+        "label": "مشاريع الواجهة الأمامية",
+        "sublabel": "HTML, CSS, JavaScript"
+      },
+      "training": {
+        "label": "برنامج تدريب NTI",
+        "sublabel": "برنامج شباب مصر الرقمية"
+      },
+      "score": {
+        "label": "درجة برنامج NTI",
+        "sublabel": "مسار مصمم الويب"
+      }
+    },
+    "timelineEyebrow": "التعليم والخبرة",
+    "journey": "رحلتي",
+    "timeline": {
+      "nti": {
+        "date": "برنامج لمدة شهر ونصف",
+        "title": "NTI - برنامج شباب مصر الرقمية",
+        "org": "مسار مصمم الويب",
+        "description": "أكملت 120 ساعة من التدريب المكثف في HTML5 وCSS3 وJavaScript وBootstrap، وحصلت على درجة 88% في البرنامج."
+      },
+      "diploma": {
+        "date": "متوقع 2026",
+        "title": "كلية الدراسات العليا للبحوث الإحصائيه",
+        "org": "علوم الحاسب - دبلوم عالٍ",
+        "description": "برنامج دبلوم عالٍ لمدة سنتين يبني أساسًا قويًا في علوم الحاسب وتطوير البرمجيات."
+      },
+      "adan": {
+        "date": "مشروع التخرج",
+        "title": "\"Adan\" - مشروع التخرج",
+        "org": "تطبيق MERN Stack كامل",
+        "description": "قدت الواجهة الأمامية بالكامل لمشروع تخرج MERN Stack كامل، من المعمارية حتى تنفيذ واجهة المستخدم."
+      },
+      "freelance": {
+        "date": "جارٍ",
+        "title": "مطور MERN Stack مستقل",
+        "org": "مشاريع مستقلة",
+        "description": "أبني مشاريع واقعية مثل نظام نقاط البيع وتطبيق الملاحظات، مع تطبيق React وNode.js وExpress وMongoDB من الطرف إلى الطرف."
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "الخبرة التقنية",
+    "title": "المهارات والأدوات",
+    "intro": "مجموعة أدوات عملية لـ MERN Stack تشكلت عبر مشاريع حقيقية - من بناء أنظمة مصادقة كاملة وواجهات RESTful APIs إلى تصحيح أخطاء بمستوى إنتاجي وإطلاق واجهات مصقولة ومتحركة.",
+    "technologies": "التقنيات التي أعمل بها",
+    "mernCategory": "تطوير MERN Stack",
+    "toolsCategory": "الأدوات والتصميم",
+    "level": "المستوى {{level}}/{{max}}",
+    "levelAria": "تقييم {{level}} من {{max}}",
+    "deepening": "أتعمق حاليًا في: TypeScript, Next.js"
+  },
+  "projects": {
+    "eyebrow": "معرض الأعمال",
+    "title": "المشاريع",
+    "intro": "مشاريع حقيقية بنيتها من البداية إلى النهاية - من تطبيقات MERN Stack كاملة إلى واجهات أمامية مركّزة.",
+    "filterAria": "تصفية المشاريع حسب الفئة",
+    "filters": {
+      "all": "الكل",
+      "fullstack": "MERN Stack",
+      "frontend": "الواجهة الأمامية (أصلي)"
+    },
+    "empty": "لا توجد مشاريع في هذه الفئة بعد.",
+    "moreNote": "يجري توثيق نحو 12 مشروعًا إضافيًا للواجهة الأمامية (HTML, CSS, JavaScript) وستظهر هنا قريبًا.",
+    "getInTouch": "تواصل معي",
+    "items": {
+      "adan": {
+        "subtitle": "مشروع التخرج (MERN)",
+        "description": "مشروع تخرج كامل بتقنية MERN Stack توليت فيه الواجهة الأمامية بالكامل، من المعمارية حتى واجهة المستخدم باستخدام React."
+      },
+      "pos": {
+        "subtitle": "تطبيق نقطة البيع (MERN Stack)",
+        "description": "نظام نقطة بيع كامل بتقنية MERN Stack يدير المنتجات والطلبات والمصادقة، وتم تحسينه عبر إصلاح أكثر من 20 خطأً إنتاجيًا."
+      },
+      "notes": {
+        "subtitle": "تطبيق ملاحظات (MERN Stack)",
+        "description": "تطبيق ملاحظات كامل بتقنية MERN Stack مع مصادقة JWT وملاحظات مثبتة ورفع عبر Cloudinary ولوحة متابعة لإحصاءات الملاحظات."
+      },
+      "flownet": {
+        "subtitle": "تطبيق تواصل اجتماعي (MERN Stack)",
+        "description": "تطبيق تواصل اجتماعي بـ React وVite يستخدم مصادقة Clerk وحركات Framer Motion وشريط تنقل جانبي متجاوب."
+      },
+      "nabdhayah": {
+        "subtitle": "منصة للتبرع بالدم (MERN Stack)",
+        "description": "منصة MERN Stack تربط المتبرعين بالدم بالمستفيدين حسب أقرب موقع، مع بحث جغرافي وإشعارات ودردشة."
+      },
+      "memory": {
+        "subtitle": "لعبة ذاكرة للمتصفح (Vanilla JS)",
+        "description": "لعبة مطابقة ذاكرة في المتصفح مبنية بـ JavaScript الخام، مع حركات قلب وتأثيرات صوتية وتتبع مباشر للنقاط."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "تواصل معي",
+    "title": "لنبنِ شيئًا معًا",
+    "intro": "متاح لفرص الدوام الكامل ومشاريع العمل الحر/التعاقد.",
+    "location": "الموقع",
+    "availability": "التوفر",
+    "email": "البريد الإلكتروني",
+    "linkedin": "LinkedIn",
+    "locationValue": "مصر",
+    "availabilityValue": "متاح للعمل الحر والدوام الكامل",
+    "fullName": "الاسم الكامل",
+    "emailAddress": "البريد الإلكتروني",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "send": "إرسال الرسالة",
+    "sending": "جارٍ الإرسال...",
+    "success": "تم إرسال الرسالة - شكرًا لك!",
+    "error": "حدث خطأ ما. يُرجى المحاولة مرة أخرى أو مراسلتي مباشرة عبر البريد.",
+    "githubAria": "GitHub",
+    "linkedinAria": "LinkedIn"
+  },
+  "footer": {
+    "blurb": "طالب علوم حاسب ومطور MERN Stack، أبني تطبيقات ويب واقعية من خلال مشاريع عملية.",
+    "navAria": "تذييل الصفحة",
+    "copyright": "© 2026 Moaaz Elbedawy.",
+    "openToOpportunities": "متاح للفرص",
+    "githubAria": "GitHub",
+    "linkedinAria": "LinkedIn",
+    "emailAria": "البريد الإلكتروني"
+  }
+}

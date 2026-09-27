@@ -2,34 +2,43 @@
 @config "../tailwind.config.js";
 
 :root {
-  /* Dark mode — each layer is now clearly lighter than the one below it,
-     so cards/borders/hover states are visibly distinct from the page background. */
-  --color-background: 10 10 11;
-  --color-surface-1: 24 24 27;
-  --color-surface-2: 39 39 42;
-  --color-surface-hover: 63 63 70;
-  --color-border: 63 63 70;
-  --color-border-subdued: 39 39 42;
-  --color-text-primary: 250 250 250;
-  --color-text-secondary: 212 212 216;
-  --color-text-tertiary: 161 161 170;
+  /* Dark mode — softened: background isn't pure black, text isn't pure
+     white, reducing overall harshness while keeping layers distinct. */
+  --color-background: 18 18 20;
+  --color-surface-1: 30 30 33;
+  --color-surface-2: 42 42 46;
+  --color-surface-hover: 58 58 63;
+  --color-border: 58 58 63;
+  --color-border-subdued: 42 42 46;
+  --color-text-primary: 230 230 232;
+  --color-text-secondary: 190 190 195;
+  --color-text-tertiary: 145 145 152;
 
-  --color-accent: 255 69 0;
-  --color-accent-hover: 255 94 36;
+  --color-accent: 224 86 47;
+  --color-accent-hover: 240 104 62;
+
+  --shadow-opacity-soft: 0.18;
+  --shadow-opacity-glow: 0.3;
+  --shadow-opacity-glow-strong: 0.45;
 }
 
 :root[data-theme="light"] {
-  /* Light mode — page canvas is a soft gray so white cards visibly "pop"
-     off it instead of blending in, with a real visible border. */
-  --color-background: 244 244 245;
+  /* Light mode — softened: background is a gentle off-white/gray instead
+     of stark white, text is dark gray instead of near-black, borders are
+     lighter so the whole page feels calmer. */
+  --color-background: 246 246 247;
   --color-surface-1: 255 255 255;
-  --color-surface-2: 250 250 250;
-  --color-surface-hover: 228 228 231;
-  --color-border: 212 212 216;
-  --color-border-subdued: 228 228 231;
-  --color-text-primary: 24 24 27;
-  --color-text-secondary: 63 63 70;
-  --color-text-tertiary: 113 113 122;
+  --color-surface-2: 249 249 250;
+  --color-surface-hover: 236 236 238;
+  --color-border: 222 222 226;
+  --color-border-subdued: 234 234 237;
+  --color-text-primary: 45 45 48;
+  --color-text-secondary: 90 90 96;
+  --color-text-tertiary: 130 130 136;
+
+  --shadow-opacity-soft: 0.06;
+  --shadow-opacity-glow: 0.1;
+  --shadow-opacity-glow-strong: 0.15;
 }
 
 html {
@@ -45,6 +54,14 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html[dir="rtl"] body {
+  font-family: Cairo, Inter, sans-serif;
+}
+
+html[dir="rtl"] .font-heading {
+  font-family: Cairo, "Plus Jakarta Sans", sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {

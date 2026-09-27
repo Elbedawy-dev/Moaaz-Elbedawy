@@ -1,15 +1,19 @@
+import { useTranslation } from 'react-i18next'
+
 export const PROJECT_FILTERS = [
-  { id: 'all', label: 'All' },
-  { id: 'fullstack', label: 'Full-Stack (MERN)' },
-  { id: 'frontend', label: 'Frontend (HTML/CSS/JS)' },
+  { id: 'all', labelKey: 'projects.filters.all' },
+  { id: 'fullstack', labelKey: 'projects.filters.fullstack' },
+  { id: 'frontend', labelKey: 'projects.filters.frontend' },
 ]
 
 export default function ProjectFilters({ value, onChange }) {
+  const { t } = useTranslation()
+
   return (
     <div
-      className="inline-flex flex-wrap gap-2 rounded-full border border-border bg-surface-1 p-1"
+      className="inline-flex rounded-full border border-border bg-surface-1 p-1"
       role="tablist"
-      aria-label="Filter projects by category"
+      aria-label={t('projects.filterAria')}
     >
       {PROJECT_FILTERS.map((filter) => {
         const active = value === filter.id
@@ -21,13 +25,14 @@ export default function ProjectFilters({ value, onChange }) {
             role="tab"
             aria-selected={active}
             onClick={() => onChange(filter.id)}
-            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors 
+              cursor-pointer ${
               active
                 ? 'bg-accent text-text-primary shadow-glow'
                 : 'text-text-secondary hover:text-text-primary'
             }`}
           >
-            {filter.label}
+            {t(filter.labelKey)}
           </button>
         )
       })}

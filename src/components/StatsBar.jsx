@@ -1,35 +1,32 @@
 import { useInView, useReducedMotion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Award, Clock, FolderGit2, Layers } from 'lucide-react'
 
 const stats = [
   {
+    id: 'mern',
     icon: Layers,
     value: 3,
     suffix: '+',
-    label: 'MERN Stack Projects',
-    sublabel: 'Adan, POS System, Notes App',
   },
   {
+    id: 'total',
     icon: FolderGit2,
     value: 18,
     suffix: '+',
-    label: 'Total Projects Built',
-    sublabel: 'Full-stack & front-end',
   },
   {
+    id: 'training',
     icon: Clock,
     value: 120,
     suffix: 'h',
-    label: 'Intensive Training',
-    sublabel: 'NTI Digital Egypt Program',
   },
   {
+    id: 'score',
     icon: Award,
     value: 88,
     suffix: '%',
-    label: 'Program Score',
-    sublabel: 'NTI Web Designer Track',
   },
 ]
 
@@ -67,6 +64,7 @@ function CountUp({ value, suffix, start }) {
 }
 
 export default function StatsBar() {
+  const { t } = useTranslation()
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
@@ -75,7 +73,6 @@ export default function StatsBar() {
       ref={ref}
       className="relative my-10 border-y border-border/90 bg-surface-1/70 py-10 shadow-xs backdrop-blur-md"
     >
-      {/* Subtle accent glow across the highlighted band */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 bg-radial from-accent/15 via-accent/5 to-transparent"
@@ -96,11 +93,11 @@ export default function StatsBar() {
               const Icon = stat.icon
               return (
                 <div
-                  key={stat.label}
+                  key={stat.id}
                   className={`
                     group relative flex flex-col justify-between p-6
                     transition-all duration-300 hover:bg-surface-hover/60
-                    ${idx % 2 === 1 ? 'sm:border-l sm:border-border/60 lg:border-l-0' : ''}
+                    ${idx % 2 === 1 ? 'sm:border-s sm:border-border/60 lg:border-s-0' : ''}
                   `}
                 >
                   <div className="flex items-center justify-between">
@@ -124,10 +121,10 @@ export default function StatsBar() {
                       <CountUp value={stat.value} suffix={stat.suffix} start={inView} />
                     </p>
                     <p className="mt-1.5 font-heading text-base font-bold tracking-heading text-text-primary">
-                      {stat.label}
+                      {t(`home.stats.${stat.id}.label`)}
                     </p>
                     <p className="mt-0.5 font-mono text-xs text-text-tertiary">
-                      {stat.sublabel}
+                      {t(`home.stats.${stat.id}.sublabel`)}
                     </p>
                   </div>
                 </div>

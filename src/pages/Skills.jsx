@@ -1,5 +1,6 @@
 import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Code2, Wrench, Boxes, Cpu } from 'lucide-react'
 import {
   ReactIcon,
@@ -18,7 +19,6 @@ import {
   getTechIcon,
 } from '../components/TechIcons'
 
-// Proficiency levels (1-5) directly converted to percentages (level * 20)
 const mernSkills = [
   { name: 'HTML5', level: 4 },
   { name: 'CSS3', level: 4 },
@@ -54,37 +54,29 @@ const techOverview = [
 ]
 
 function ProgressBar({ level, max = 5 }) {
+  const { t } = useTranslation()
   const reduceMotion = useReducedMotion()
   const percentage = Math.min(100, Math.max(0, level * 20))
 
-  // Watch the TRACK (has real width/height) instead of putting whileInView
-  // directly on the fill bar. The fill bar starts at width: 0, and on many
-  // mobile browsers a zero-width element's IntersectionObserver never
-  // reliably reports as "visible", so whileInView on it can silently never
-  // fire and the bar stays stuck at 0% forever on phones.
   const trackRef = useRef(null)
   const isInView = useInView(trackRef, { once: true, margin: '-10% 0px' })
   const showFilled = reduceMotion || isInView
 
   return (
     <div className="mt-3">
-      {/* Track */}
       <div ref={trackRef} className="relative h-2 w-full overflow-hidden rounded-full bg-surface-2">
-        {/* Animated fill bar */}
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: showFilled ? `${percentage}%` : 0 }}
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-          className="relative h-full rounded-full bg-accent shadow-glow"
+          className="relative h-full rounded-full bg-accent shadow-glow rtl:ms-auto"
         >
-          {/* Subtle gradient highlight */}
-          <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent rtl:bg-linear-to-l" />
         </motion.div>
       </div>
 
-      {/* Alternate micro dot indicator for secondary visual reference */}
       <div className="mt-2 flex items-center justify-between text-[11px] text-text-tertiary">
-        <div className="flex items-center gap-1" aria-label={`${level} of ${max} rating`}>
+        <div className="flex items-center gap-1" aria-label={t('skills.levelAria', { level, max })}>
           {Array.from({ length: max }).map((_, i) => (
             <span
               key={i}
@@ -93,7 +85,7 @@ function ProgressBar({ level, max = 5 }) {
           ))}
         </div>
         <span className="font-mono text-[10px] text-text-tertiary">
-          Level {level}/{max}
+          {t('skills.level', { level, max })}
         </span>
       </div>
     </div>
@@ -157,11 +149,11 @@ function SkillCategory({ icon: Icon, title, skills, delay = 0 }) {
 }
 
 export default function Skills() {
+  const { t } = useTranslation()
   const reduceMotion = useReducedMotion()
 
   return (
     <section className="mx-auto max-w-content px-5 py-16 lg:py-20">
-      {/* Header */}
       <motion.div
         initial={reduceMotion ? false : { opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -169,19 +161,16 @@ export default function Skills() {
         transition={{ duration: 0.5 }}
       >
         <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-          ● Technical Expertise
+          ● {t('skills.eyebrow')}
         </p>
         <h1 className="mt-2 font-heading text-4xl font-extrabold tracking-heading text-text-primary sm:text-5xl">
-          Skills &amp; Tools
+          {t('skills.title')}
         </h1>
         <p className="mt-4 max-w-2xl text-base text-text-secondary">
-          A practical MERN Stack toolkit shaped by real projects - from building
-          full authentication systems and RESTful APIs to debugging production grade
-          bugs and shipping polished, animated interfaces.
+          {t('skills.intro')}
         </p>
       </motion.div>
 
-      {/* ==================== TECHNOLOGIES I WORK WITH ICON GRID ==================== */}
       <motion.div
         initial={reduceMotion ? false : { opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -192,7 +181,7 @@ export default function Skills() {
         <div className="flex items-center gap-2 text-accent">
           <Cpu size={18} />
           <h2 className="font-heading text-base font-bold tracking-heading text-text-primary">
-            Technologies I Work With
+            {t('skills.technologies')}
           </h2>
         </div>
 
@@ -215,18 +204,15 @@ export default function Skills() {
         </div>
       </motion.div>
 
-      {/* ==================== DETAILED SKILL PROGRESS BARS ==================== */}
       <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
-        <SkillCategory icon={Code2} title="MERN Stack Development" skills={mernSkills} />
-        <SkillCategory icon={Wrench} title="Tools & Design" skills={toolSkills} delay={0.1} />
+        <SkillCategory icon={Code2} title={t('skills.mernCategory')} skills={mernSkills} />
+        <SkillCategory icon={Wrench} title={t('skills.toolsCategory')} skills={toolSkills} delay={0.1} />
       </div>
 
-      {/* Footer Info */}
       <div className="mt-12 border-t border-border pt-6">
         <p className="inline-flex items-center gap-2 text-sm text-text-tertiary">
           <Boxes size={14} className="text-accent" />
-          {/* Confirmed continuous learning */}
-          Currently deepening: TypeScript, Next.js
+          {t('skills.deepening')}
         </p>
       </div>
     </section>

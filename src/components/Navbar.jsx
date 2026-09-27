@@ -2,17 +2,25 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, Moon, Settings, Sun, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
 import { navLinks } from '../data/navLinks'
 import { useTheme } from '../context/ThemeContext'
 import Logo from './Logo'
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation()
   const [open, setOpen] = useState(false)
   const [colorPickerOpen, setColorPickerOpen] = useState(false)
   const pickerRef = useRef(null)
 
   const { theme, toggleTheme, accentId, setAccentId, accents } = useTheme()
+  const currentLng = i18n.language?.startsWith('ar') ? 'ar' : 'en'
+
+  function changeLanguage(lng) {
+    i18n.changeLanguage(lng)
+    setColorPickerOpen(false)
+  }
 
   // Close the color picker on outside click.
   useEffect(() => {
@@ -69,7 +77,7 @@ export default function Navbar() {
         <div className="mx-auto flex h-full max-w-content items-center justify-between gap-4 px-5">
           <Logo compact />
 
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-1 lg:flex" aria-label={t('nav.primaryAria')}>
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
@@ -83,7 +91,7 @@ export default function Navbar() {
                   }`
                 }
               >
-                {link.label}
+                {t(link.labelKey)}
               </NavLink>
             ))}
           </nav>
@@ -92,7 +100,7 @@ export default function Navbar() {
             {/* Theme toggle */}
             <button
               type="button"
-              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={theme === 'dark' ? t('nav.switchToLight') : t('nav.switchToDark')}
               className="flex h-9 w-9 items-center justify-center rounded-control border border-border
               bg-surface-2 text-text-secondary transition-colors hover:border-border-active 
               hover:text-text-primary cursor-pointer"
@@ -101,11 +109,11 @@ export default function Navbar() {
               {theme === 'dark' ? <Moon size={16} /> : <Sun size={16} />}
             </button>
 
-            {/* Accent color picker */}
+            {/* Accent color + language picker */}
             <div className="relative" ref={pickerRef}>
               <button
                 type="button"
-                aria-label="Change accent color"
+                aria-label={t('nav.changeAccent')}
                 aria-expanded={colorPickerOpen}
                 className="flex h-9 w-9 items-center justify-center rounded-control border border-border
                 bg-surface-2 text-text-secondary transition-colors hover:border-border-active 
@@ -117,25 +125,57 @@ export default function Navbar() {
 
               {colorPickerOpen ? (
                 <div
-                  className="absolute right-0 top-full mt-2 flex gap-2 rounded-card border border-border
+                  className="absolute end-0 top-full mt-2 rounded-card border border-border
                   bg-surface-1 p-3 shadow-card-hover"
                 >
-                  {accents.map((a) => (
-                    <button
-                      key={a.id}
-                      type="button"
-                      aria-label={a.name}
-                      title={a.name}
-                      onClick={() => {
-                        setAccentId(a.id)
-                        setColorPickerOpen(false)
-                      }}
-                      className={`h-7 w-7 rounded-full border-2 transition-transform hover:scale-110 ${
-                        accentId === a.id ? 'border-text-primary' : 'border-transparent'
-                      }`}
-                      style={{ backgroundColor: `rgb(${a.rgb})` }}
-                    />
-                  ))}
+                  <div className="flex gap-2">
+                    {accents.map((a) => (
+                      <button
+                        key={a.id}
+                        type="button"
+                        aria-label={t(`accents.${a.id}`)}
+                        title={t(`accents.${a.id}`)}
+                        onClick={() => {
+                          setAccentId(a.id)
+                          setColorPickerOpen(false)
+                        }}
+                        className={`h-7 w-7 rounded-full border-2 transition-transform hover:scale-110 ${
+                          accentId === a.id ? 'border-text-primary' : 'border-transparent'
+                        }`}
+                        style={{ backgroundColor: `rgb(${a.rgb})` }}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="mt-3 border-t border-border pt-3">
+                    <p className="mb-2 font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
+                      {t('nav.language')}
+                    </p>
+                    <div className="flex gap-2">
+                      <button
+                        type="button"
+                        onClick={() => changeLanguage('en')}
+                        className={`rounded-control border px-3 py-1 text-xs font-semibold transition-colors ${
+                          currentLng === 'en'
+                            ? 'border-accent bg-accent-subtle text-accent'
+                            : 'border-border text-text-secondary hover:text-text-primary'
+                        }`}
+                      >
+                        {t('nav.langEn')}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => changeLanguage('ar')}
+                        className={`rounded-control border px-3 py-1 text-xs font-semibold transition-colors ${
+                          currentLng === 'ar'
+                            ? 'border-accent bg-accent-subtle text-accent'
+                            : 'border-border text-text-secondary hover:text-text-primary'
+                        }`}
+                      >
+                        {t('nav.langAr')}
+                      </button>
+                    </div>
+                  </div>
                 </div>
               ) : null}
             </div>
@@ -145,13 +185,13 @@ export default function Navbar() {
               className="hidden rounded-control bg-accent px-4 py-2 text-sm font-semibold text-text-primary
               shadow-glow transition-all hover:bg-accent-hover hover:shadow-glow-strong sm:inline-flex"
             >
-              Get in Touch
+              {t('nav.getInTouch')}
             </Link>
 
             <button
               type="button"
               className="flex h-9 w-9 items-center justify-center rounded-control border border-border text-text-secondary lg:hidden"
-              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-label={open ? t('nav.closeMenu') : t('nav.openMenu')}
               aria-expanded={open}
               aria-controls="mobile-menu-panel"
               onClick={() => setOpen((value) => !value)}
@@ -195,7 +235,7 @@ export default function Navbar() {
                 className="fixed inset-x-0 top-16 z-50 border-t border-border-subdued
                 bg-surface-1 px-5 py-4 shadow-card-hover lg:hidden"
               >
-                <nav className="flex flex-col gap-1" aria-label="Mobile">
+                <nav className="flex flex-col gap-1" aria-label={t('nav.mobileAria')}>
                   {navLinks.map((link) => (
                     <NavLink
                       key={link.to}
@@ -208,7 +248,7 @@ export default function Navbar() {
                         }`
                       }
                     >
-                      {link.label}
+                      {t(link.labelKey)}
                     </NavLink>
                   ))}
                   <Link
@@ -217,7 +257,7 @@ export default function Navbar() {
                     className="mt-2 rounded-control bg-accent px-4 py-2 text-center text-sm font-semibold
                     text-text-primary sm:hidden"
                   >
-                    Get in Touch
+                    {t('nav.getInTouch')}
                   </Link>
                 </nav>
               </motion.div>

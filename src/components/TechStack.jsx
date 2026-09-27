@@ -1,10 +1,11 @@
+import { useTranslation } from 'react-i18next'
 import { Code2, Server, Database } from 'lucide-react'
 import { getTechIcon } from './TechIcons'
 
 const categories = [
   {
     icon: Code2,
-    title: 'Frontend',
+    titleKey: 'home.techStack.frontend',
     items: [
       { name: 'React.js', highlight: true },
       { name: 'JavaScript (ES6+)', highlight: false },
@@ -16,7 +17,7 @@ const categories = [
   },
   {
     icon: Server,
-    title: 'Backend',
+    titleKey: 'home.techStack.backend',
     items: [
       { name: 'Node.js', highlight: true },
       { name: 'Express.js', highlight: false },
@@ -25,7 +26,7 @@ const categories = [
   },
   {
     icon: Database,
-    title: 'Database & Tools',
+    titleKey: 'home.techStack.databaseTools',
     items: [
       { name: 'MongoDB', highlight: true },
       { name: 'Git & GitHub', highlight: false },
@@ -36,13 +37,15 @@ const categories = [
 ]
 
 export default function TechStack() {
+  const { t } = useTranslation()
+
   return (
     <section className="mx-auto max-w-content px-5 py-16 lg:py-20">
       <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-        What I Work With
+        {t('home.techStack.eyebrow')}
       </p>
       <h2 className="mt-2 font-heading text-3xl font-extrabold tracking-heading text-text-primary">
-        Core Tech Stack
+        {t('home.techStack.title')}
       </h2>
 
       <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -50,7 +53,7 @@ export default function TechStack() {
           const CategoryIcon = category.icon
           return (
             <article
-              key={category.title}
+              key={category.titleKey}
               className="
                 group relative flex flex-col rounded-card
                 border-2 border-border/80 bg-surface-1/95 p-6
@@ -70,7 +73,7 @@ export default function TechStack() {
                   <CategoryIcon size={18} />
                 </span>
                 <h3 className="font-heading text-lg font-bold tracking-heading text-text-primary">
-                  {category.title}
+                  {t(category.titleKey)}
                 </h3>
               </div>
 

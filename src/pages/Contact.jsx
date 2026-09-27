@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Mail, MapPin, Clock, Send } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from '../components/SocialIcons'
 import emailjs from '@emailjs/browser'
@@ -7,23 +8,23 @@ import emailjs from '@emailjs/browser'
 const infoRows = [
   {
     icon: MapPin,
-    label: 'Location',
-    value: 'Egypt',
+    id: 'location',
+    valueKey: 'contact.locationValue',
   },
   {
     icon: Clock,
-    label: 'Availability',
-    value: 'Open to Freelance & full-time',
+    id: 'availability',
+    valueKey: 'contact.availabilityValue',
   },
   {
     icon: Mail,
-    label: 'Email',
+    id: 'email',
     value: 'moaazelbedawy@email.com',
-    href:  'https://moaazelbedawy@gmail.com',
+    href: 'https://moaazelbedawy@gmail.com',
   },
   {
     icon: LinkedinIcon,
-    label: 'LinkedIn',
+    id: 'linkedin',
     value: 'linkedin.com/in/moaaz-elbedawy',
     href: 'https://linkedin.com/in/moaaz-elbedawy',
   },
@@ -37,6 +38,7 @@ const initialForm = {
 }
 
 export default function Contact() {
+  const { t } = useTranslation()
   const formRef = useRef(null)
 
   const reduceMotion = useReducedMotion()
@@ -102,8 +104,6 @@ export default function Contact() {
 
   return (
     <section className="mx-auto max-w-content px-5 py-16 lg:py-20">
-
-      {/* Header */}
       <motion.div
         initial={reduceMotion ? false : 'hidden'}
         whileInView="show"
@@ -117,23 +117,21 @@ export default function Contact() {
         }}
       >
         <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">
-          ● Get in Touch
+          ● {t('contact.eyebrow')}
         </p>
 
         <h1
           className="mt-2 font-heading text-4xl font-extrabold tracking-heading text-text-primary sm:text-5xl"
         >
-          Let&apos;s Build Something Together
+          {t('contact.title')}
         </h1>
 
         <p className="mt-4 max-w-2xl text-base text-text-secondary">
-          Open to full time opportunities and freelance/contract projects.
+          {t('contact.intro')}
         </p>
       </motion.div>
 
       <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-12">
-
-        {/* LEFT: Contact Info + Socials */}
         <motion.div
           initial={reduceMotion ? false : 'hidden'}
           whileInView="show"
@@ -156,18 +154,18 @@ export default function Contact() {
                 const content = (
                   <>
                     <dt className="text-xs font-medium text-text-tertiary">
-                      {row.label}
+                      {t(`contact.${row.id}`)}
                     </dt>
 
                     <dd className="mt-0.5 text-sm font-semibold text-text-primary">
-                      {row.value}
+                      {row.valueKey ? t(row.valueKey) : row.value}
                     </dd>
                   </>
                 )
 
                 return (
                   <div
-                    key={row.label}
+                    key={row.id}
                     className="flex items-center gap-3.5 py-4 first:pt-0 last:pb-0"
                   >
                     <span
@@ -199,35 +197,29 @@ export default function Contact() {
             </dl>
           </div>
 
-          {/* Social Links */}
           <div className="mt-6 flex gap-3">
-
-            {/* GitHub */}
             <a
               href="https://github.com/Elbedawy-dev"
               target="_blank"
               rel="noreferrer"
-              aria-label="GitHub"
+              aria-label={t('contact.githubAria')}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-text-secondary transition-all hover:border-border-active hover:bg-accent hover:text-text-primary"
             >
               <GithubIcon size={18} />
             </a>
 
-            {/* LinkedIn */}
             <a
               href="https://linkedin.com/in/moaaz-elbedawy"
               target="_blank"
               rel="noreferrer"
-              aria-label="LinkedIn"
+              aria-label={t('contact.linkedinAria')}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-text-secondary transition-all hover:border-border-active hover:bg-accent hover:text-text-primary"
             >
               <LinkedinIcon size={18} />
             </a>
-
           </div>
         </motion.div>
 
-        {/* RIGHT: Contact Form */}
         <motion.form
           ref={formRef}
           onSubmit={sendEmail}
@@ -245,14 +237,12 @@ export default function Contact() {
           className="rounded-card border-2 border-border/80 bg-surface-1/95 p-6 shadow-card-hover"
         >
           <div className="flex flex-col gap-4">
-
-            {/* Name */}
             <div>
               <label
                 htmlFor="name"
                 className="text-xs text-text-tertiary"
               >
-                Full Name
+                {t('contact.fullName')}
               </label>
 
               <input
@@ -266,13 +256,12 @@ export default function Contact() {
               />
             </div>
 
-            {/* Email */}
             <div>
               <label
                 htmlFor="email"
                 className="text-xs text-text-tertiary"
               >
-                Email Address
+                {t('contact.emailAddress')}
               </label>
 
               <input
@@ -286,13 +275,12 @@ export default function Contact() {
               />
             </div>
 
-            {/* Subject */}
             <div>
               <label
                 htmlFor="subject"
                 className="text-xs text-text-tertiary"
               >
-                Subject
+                {t('contact.subject')}
               </label>
 
               <input
@@ -306,13 +294,12 @@ export default function Contact() {
               />
             </div>
 
-            {/* Message */}
             <div>
               <label
                 htmlFor="message"
                 className="text-xs text-text-tertiary"
               >
-                Message
+                {t('contact.message')}
               </label>
 
               <textarea
@@ -326,33 +313,29 @@ export default function Contact() {
               />
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={status === 'sending'}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-control bg-accent px-5 py-2.5 text-sm font-semibold text-text-primary shadow-glow transition-all hover:bg-accent-hover hover:shadow-glow-strong disabled:cursor-not-allowed disabled:opacity-60"
             >
-              <Send size={16} />
+              <Send size={16} className="rtl:-scale-x-100" />
 
               {status === 'sending'
-                ? 'Sending...'
-                : 'Send Message'}
+                ? t('contact.sending')
+                : t('contact.send')}
             </button>
 
-            {/* Success Message */}
             {status === 'success' && (
               <p className="text-sm text-accent">
-                Message sent - thank you!
+                {t('contact.success')}
               </p>
             )}
 
-            {/* Error Message */}
             {status === 'error' && (
               <p className="text-sm text-red-400/80">
-                Something went wrong. Please try again or email me directly.
+                {t('contact.error')}
               </p>
             )}
-
           </div>
         </motion.form>
       </div>

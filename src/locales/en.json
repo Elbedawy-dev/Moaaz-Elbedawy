@@ -1,0 +1,253 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "getInTouch": "Get in Touch",
+    "primaryAria": "Primary",
+    "mobileAria": "Mobile",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "changeAccent": "Change accent color",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "langEn": "EN",
+    "langAr": "AR"
+  },
+  "accents": {
+    "orange": "Fiery Orange",
+    "blue": "Electric Blue",
+    "emerald": "Emerald",
+    "violet": "Violet",
+    "rose": "Rose",
+    "amber": "Amber"
+  },
+  "common": {
+    "downloadCV": "Download CV",
+    "liveDemo": "Live Demo",
+    "liveDemoSoon": "Live Demo (soon)",
+    "code": "Code",
+    "codeSoon": "Code (soon)",
+    "previewAlt": "{{title}} preview"
+  },
+  "home": {
+    "hero": {
+      "badge": "Open to Freelance & full-time Opportunities",
+      "title": "I'm <0>MERN</0> Stack <1>Web</1> Developer.",
+      "description": "I'm Moaaz Elbedawy, a MERN Stack developer specializing in building web applications for the education and e-commerce sectors - from learning platforms and tutoring marketplaces to point-of-sale and online store systems.",
+      "exploreWorks": "Explore Selected Works",
+      "coreTech": "Core Technologies",
+      "cleanCode": "Clean Code",
+      "mernSpecialist": "MERN Specialist",
+      "handsOnLearner": "Hands-on Learner",
+      "browserHandle": "moaaz.elbedawy//mern-stack",
+      "openToWork": "Open to Work",
+      "photoAlt": "Moaaz Elbedawy",
+      "floatingStatValue": "3+ Full MERN",
+      "floatingStatLabel": "Production-Grade Projects"
+    },
+    "stats": {
+      "mern": {
+        "label": "MERN Stack Projects",
+        "sublabel": "Adan, POS System, Notes App"
+      },
+      "total": {
+        "label": "Total Projects Built",
+        "sublabel": "Full-stack & front-end"
+      },
+      "training": {
+        "label": "Intensive Training",
+        "sublabel": "NTI Digital Egypt Program"
+      },
+      "score": {
+        "label": "Program Score",
+        "sublabel": "NTI Web Designer Track"
+      }
+    },
+    "techStack": {
+      "eyebrow": "What I Work With",
+      "title": "Core Tech Stack",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databaseTools": "Database & Tools"
+    },
+    "selectedWorks": {
+      "eyebrow": "Selected Work",
+      "title": "Selected Works",
+      "moreFrontend": "+15 more front-end projects (HTML, CSS, JavaScript)"
+    },
+    "why": {
+      "eyebrow": "Value",
+      "title": "Why Work With Me",
+      "communication": {
+        "title": "Clear Communication",
+        "body": "Regular updates and direct availability during agreed working hours."
+      },
+      "cleanCode": {
+        "title": "Clean, Readable Code",
+        "body": "Every project follows organized, maintainable coding practices - not just 'it works' code."
+      },
+      "problemSolver": {
+        "title": "Hands - On Problem Solver",
+        "body": "Learns and builds through real projects rather than passive tutorials."
+      },
+      "learner": {
+        "title": "Continuous Learner",
+        "body": "Currently completing a Computer Science diploma while actively building production style MERN projects."
+      }
+    },
+    "cta": {
+      "headline": "Have a project in mind or looking for a full-stack developer to join your team?",
+      "text": "Open to freelance engagements and full - time opportunities.",
+      "getInTouch": "Get in Touch",
+      "readBio": "Read Bio"
+    }
+  },
+  "about": {
+    "eyebrow": "About Me",
+    "title": "CS Student & Mearn - Stack Developer",
+    "intro": "I am a computer science student at the Graduate School of Statistical Research. I am a  MERN Stack web developer, specializing in creating commercial and educational systems and websites.",
+    "personalInfo": "Personal Info",
+    "info": {
+      "name": "Name",
+      "role": "Role",
+      "education": "Education",
+      "languages": "Languages",
+      "availability": "Availability",
+      "roleValue": "MERN Stack Developer",
+      "educationValue": "CS Higher Diploma - Higher Institute for Statistical Studies and Research",
+      "languagesValue": "Arabic, English",
+      "availabilityValue": "Freelance & full - time"
+    },
+    "stats": {
+      "mern": {
+        "label": "Full MERN Stack Projects",
+        "sublabel": "Adan, POS System, Notes App"
+      },
+      "frontend": {
+        "label": "Frontend Projects",
+        "sublabel": "HTML, CSS, JavaScript"
+      },
+      "training": {
+        "label": "NTI Training Program",
+        "sublabel": "Digital Egypt Youth Program"
+      },
+      "score": {
+        "label": "NTI Program Score",
+        "sublabel": "Web Designer Track"
+      }
+    },
+    "timelineEyebrow": "Education & Experience",
+    "journey": "My Journey",
+    "timeline": {
+      "nti": {
+        "date": "1.5-Month Program",
+        "title": "NTI - Digital Egypt Youth Program",
+        "org": "Web Designer Track",
+        "description": "Completed 120 hours of intensive training in HTML5, CSS3, JavaScript, and Bootstrap, scoring 88% on the program."
+      },
+      "diploma": {
+        "date": "Expected 2026",
+        "title": "Higher Institute for Statistical Studies and Research",
+        "org": "Computer Science - Higher Diploma",
+        "description": "2-year Higher Diploma program building a strong foundation in computer science and software development."
+      },
+      "adan": {
+        "date": "Graduation Project",
+        "title": "\"Adan\" - Graduation Project",
+        "org": "Full MERN Stack Application",
+        "description": "Led the Front End entirely for a full MERN Stack graduation project, from architecture to UI implementation."
+      },
+      "freelance": {
+        "date": "Ongoing",
+        "title": "Freelance MERN Stack Developer",
+        "org": "Independent Projects",
+        "description": "Building real world projects like a POS System and Notes App, applying React, Node.js, Express, and MongoDB end to end."
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "Technical Expertise",
+    "title": "Skills & Tools",
+    "intro": "A practical MERN Stack toolkit shaped by real projects - from building full authentication systems and RESTful APIs to debugging production grade bugs and shipping polished, animated interfaces.",
+    "technologies": "Technologies I Work With",
+    "mernCategory": "MERN Stack Development",
+    "toolsCategory": "Tools & Design",
+    "level": "Level {{level}}/{{max}}",
+    "levelAria": "{{level}} of {{max}} rating",
+    "deepening": "Currently deepening: TypeScript, Next.js"
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "title": "Projects",
+    "intro": "Real projects I have built end to end - from full MERN Stack applications to focused front end interfaces.",
+    "filterAria": "Filter projects by category",
+    "filters": {
+      "all": "All",
+      "fullstack": "MERN Stack",
+      "frontend": "Frontend (Native)"
+    },
+    "empty": "No projects in this category yet.",
+    "moreNote": "~12 more front-end projects (HTML, CSS, JavaScript) are being documented and will appear here soon.",
+    "getInTouch": "Get in touch",
+    "items": {
+      "adan": {
+        "subtitle": "Graduation Project (MERN)",
+        "description": "A full MERN-stack graduation project where I owned the entire Front End, from architecture through UI using React."
+      },
+      "pos": {
+        "subtitle": "Point of Sale Application (MERN Stack)",
+        "description": "A full MERN-stack Point of Sale system handling products, orders, and authentication, refined through fixing 20+ production bugs."
+      },
+      "notes": {
+        "subtitle": "Notes/Notepad Application (MERN Stack)",
+        "description": "A full MERN-stack notes app with JWT authentication, pinned notes, Cloudinary uploads, and a dashboard tracking note statistics."
+      },
+      "flownet": {
+        "subtitle": "Social Media Application (MERN Stack)",
+        "description": "A React and Vite social media app using Clerk authentication, Framer Motion animations, and a responsive sidebar navigation."
+      },
+      "nabdhayah": {
+        "subtitle": "Blood Donation Platform (MERN Stack)",
+        "description": "A MERN-stack platform matching blood donors with recipients by nearest location, featuring geolocation search, notifications, and chat."
+      },
+      "memory": {
+        "subtitle": "Browser Memory Game (Vanilla JS)",
+        "description": "A browser-based memory matching game built with vanilla JavaScript, featuring flip animations, sound effects, and live score tracking."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Get in Touch",
+    "title": "Let's Build Something Together",
+    "intro": "Open to full time opportunities and freelance/contract projects.",
+    "location": "Location",
+    "availability": "Availability",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "locationValue": "Egypt",
+    "availabilityValue": "Open to Freelance & full-time",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent - thank you!",
+    "error": "Something went wrong. Please try again or email me directly.",
+    "githubAria": "GitHub",
+    "linkedinAria": "LinkedIn"
+  },
+  "footer": {
+    "blurb": "Computer Science Student & MERN Stack Developer, building real world web applications through hands - on projects.",
+    "navAria": "Footer",
+    "copyright": "© 2026 Moaaz Elbedawy.",
+    "openToOpportunities": "Open to opportunities",
+    "githubAria": "GitHub",
+    "linkedinAria": "LinkedIn",
+    "emailAria": "Email"
+  }
+}
