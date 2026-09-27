@@ -108,8 +108,8 @@ export default function Hero() {
           <Trans
             i18nKey="home.hero.title"
             components={{
-              0: <span className="text-accent" />,
               1: <span className="text-accent" />,
+              2: <span className="text-accent" />,
             }}
           />
         </h1>
