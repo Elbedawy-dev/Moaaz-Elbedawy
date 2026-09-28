@@ -195,8 +195,8 @@
     "getInTouch": "Get in touch",
     "items": {
       "adan": {
-        "subtitle": "Graduation Project (MERN)",
-        "description": "A full MERN-stack graduation project where I owned the entire Front End, from architecture through UI using React."
+        "subtitle": "Graduation Project (React)",
+        "description": "System for the immediate reporting of animal diseases and epidemics I owned the entire Front End, from architecture through UI using React."
       },
       "pos": {
         "subtitle": "Point of Sale Application (MERN Stack)",
